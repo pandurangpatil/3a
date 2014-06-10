@@ -23,3 +23,80 @@ Multi-tenant Web user identity managment
 Once all of the above plug-ins are installed [refer to import project into eclipse workspace](http://www.pandurangpatil.com/2014/03/install-eclipse-maven-plugin-and-import.html).
       - Install mercurial plug-in using http://cbes.javaforge.com/update to synchronise code with central repository. For more details [refer](http://www.javaforge.com/project/HGE)
    * Install MySQL 5.5 version [refer](http://dev.mysql.com/downloads/mysql/5.5.html).
+
+
+## Dev setup steps 
+    All steps related to setup the dev environment are listed under this section
+
+### Setup environment
+
+set environment variables in .bashrc
+
+```
+JAVA_HOME = Location of JDK Installation
+M2_HOME=Location of Maven installation.
+PATH=$M2_HOME/bin:$JAVA_HOME/bin:$PATH
+AGNIE_HOME=Location of directory where all agnie configuration files will be kept.
+```
+
+#### Setup required configuration files
+Below commands will copy required configurations from source code to $AGNIE_HOME. In most of the cases you might not have to change any property while doing local dev setup. In some cases if you require to change any DB credentials or schema details or any other JPA persistence related property. It is advisable not to change those properties inside corresponding persistence.xml file. There are separate overriding persistence properties files will be copied inside $AGNIE_HOME. You should define those new properties inside these properties file. This will make sure your code repo won't have any unwanted changes. 
+
+```
+$ cd $AGNIE_HOME
+$ cp -rf  <3a repo path>/code/common/src/main/configuration/* ./
+$ cp -rf <3a repo path>/code/user-admin/user-session/src/main/configuration/* ./
+$ cp -rf <3a repo path>/code/user-admin/user-persistence/src/main/configuration/* ./
+```
+
+### Build
+
+run sql setupdb.sql from following location "<3a repo path>/code/db" - This will create required db schema with required user.
+
+
+user-persistence module has dependency on user-session module. But user-session modules junit tests rely upon user-persistence module to initialize and setup db schema. Which creates the cyclic dependency if you want to make a build with all junits executed without error, as of now we have to leave with this dependency. To make a complete build with junits without error. You need to first make a build from common and user-session module by skipping the test cases and then make a complete build from base module with  junits executed.
+
+```
+$ cd <3a repo path>/code/common
+$ mvn install -Dmaven.test.skip=true
+$ cd <3a repo path>/code/user-session
+$ mvn install -Dmaven.test.skip=true
+$ cd ../
+$ mvn clean install
+```
+
+If all your junits are executed successfully that means dev setup is done properly.
+
+#### Initialise DB 
+   You might have seen some sql scripts need to be executed before running the build. But that doesn't initialise the DB data. Those scripts only creates schema and required users having access to those schema. This will make sure you don't have to change anything inside persistence.xml as much as possible. If required to change anything as per explained under section "Setup required configuration files" you should override those properties from configuration file. Now below commands will setup required initial data.
+
+Note: Below commands will drop existing schema and create fresh schema with db initialised with minimum required data.
+
+```
+$ cd  <3a4users repo path>/code/tools/target
+$ unzip tools.zip 
+$ cd tools/
+$ java -jar tools.jar dbinit
+```
+
+**NOTE**: Once initialisation is done process remains in running state as memcached thread remains active. A proper shutdown need to be done. But for time being you can kill the process once you see following message on console "Billing DB got Initalized successfully.... If you find process is still running, you can safely kill the process." by pressing CTRL+C.
+
+#### Deployment and execution
+Once all builds are made and db is initialised, deploy the modules and test them.
+
+Below commands will help you to deploy generated wars.
+```
+$ cd <jetty home>/bin
+$ cp <3a repo path>/code/user-admin/userapp/target/userapp-1.0.war ../webapps/userapp.war
+$ ./jetty run
+```
+
+### Eclipse Dev Setup
+* It is always a good practice to use same maven installation for command line build as well as for eclipse, you will see detail instruction at [refer](http://www.pandurangpatil.com/2014/03/install-eclipse-maven-plugin-and-import.html).
+* Another very important configuration is Eclipse java formatter. We have to use common eclipse formatter so that all code is formatter with same formatter and it that will make sure it wont introduce any code diffs because of different formatting style. So to import our eclipse formatter follow below instructions 
+    - select "Window - > Preferences" "Preferences ... " Window will appear. Expand label "Java" from left side pane, then "Code Style" and finally select "Formatter". On the right and side pane you will see "Import" button click on it and locate our eclipse formatter at location "<3a repo path>/config/agnie-eclipse-formatter.xml". Click on apply and then OK.
+    - Once formatter is imported every time you format a java code eclipse will apply this imported formatter. NOTE: If you are not aware of eclipse short cuts then learn them as it saves lot of time. e.g. to format the open file press "CTRL + SHIFT + f" this will format the complete file. Similarly one more shortcut to remove unwanted imports as well as to import required classes you can make use of "CTRL + SHIFT + o". You should make a habit to press these shortcuts after every save.
+- To setup the project inside eclipse follow the instruction given at [refer](http://www.pandurangpatil.com/2014/03/install-eclipse-maven-plugin-and-import.html).
+
+
+    
