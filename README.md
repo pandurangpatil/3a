@@ -79,8 +79,6 @@ $ cd tools/
 $ java -jar tools.jar dbinit
 ```
 
-**NOTE**: Once initialisation is done process remains in running state as memcached thread remains active. A proper shutdown need to be done. But for time being you can kill the process once you see following message on console "Billing DB got Initalized successfully.... If you find process is still running, you can safely kill the process." by pressing CTRL+C.
-
 #### Deployment and execution
 Once all builds are made and db is initialised, deploy the modules and test them.
 
