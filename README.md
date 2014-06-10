@@ -70,7 +70,7 @@ If all your junits are executed successfully that means dev setup is done proper
 #### Initialise DB 
    You might have seen some sql scripts need to be executed before running the build. But that doesn't initialise the DB data. Those scripts only creates schema and required users having access to those schema. This will make sure you don't have to change anything inside persistence.xml as much as possible. If required to change anything as per explained under section "Setup required configuration files" you should override those properties from configuration file. Now below commands will setup required initial data.
 
-Note: Below commands will drop existing schema and create fresh schema with db initialised with minimum required data.
+Note: Below commands will drop all existing tables and create fresh schema with db initialised with minimum required data. 
 
 ```
 $ cd  <3a4users repo path>/code/tools/target
