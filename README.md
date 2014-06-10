@@ -54,12 +54,10 @@ $ cp -rf <3a repo path>/code/user-admin/user-persistence/src/main/configuration/
 run sql setupdb.sql from following location "<3a repo path>/code/db" - This will create required db schema with required user.
 
 
-user-persistence module has dependency on user-session module. But user-session modules junit tests rely upon user-persistence module to initialize and setup db schema. Which creates the cyclic dependency if you want to make a build with all junits executed without error, as of now we have to leave with this dependency. To make a complete build with junits without error. You need to first make a build from common and user-session module by skipping the test cases and then make a complete build from base module with  junits executed.
+user-persistence module has dependency on user-session module. But user-session modules junit tests rely upon user-persistence module to initialize and setup db schema. Which creates the cyclic dependency if you want to make a build with all junits executed without error, as of now we have to leave with this dependency. To make a complete build with junits without error. You need to first make a build by skipping the test cases (you may quit the build while it start compiling GWT module as it takes good amount of time), build user-persistence module (this will intialize test db schema)(You have to do this build by skiping the tests for only once when you are making the build very first time on the machine), and then make a complete build from base module with junits executed.
 
 ```
-$ cd <3a repo path>/code/common
-$ mvn install -Dmaven.test.skip=true
-$ cd <3a repo path>/code/user-session
+$ cd <3a repo path>/code
 $ mvn install -Dmaven.test.skip=true
 $ cd user-persistence
 $ mvn clean install
