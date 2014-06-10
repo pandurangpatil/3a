@@ -5,12 +5,12 @@ Multi-tenant Web user identity managment
 
 ## Hardware-Software
 
-#### System requirement
+### System requirement
    * Pentium 4 and above processor.
    * HDD 50 GB or more.
    * OS - Linux preferably Ubuntu.
 
-#### Software requirement
+### Software requirement
        
    * JDK 1.7 [download it from here](http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html)
    * Apache maven for more details [refer](http://maven.apache.org/) and [download latest binary](http://maven.apache.org/download.html) currently it is 3.2.1
