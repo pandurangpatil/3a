@@ -61,6 +61,8 @@ $ cd <3a repo path>/code/common
 $ mvn install -Dmaven.test.skip=true
 $ cd <3a repo path>/code/user-session
 $ mvn install -Dmaven.test.skip=true
+$ cd user-persistence
+$ mvn clean install
 $ cd ../
 $ mvn clean install
 ```
