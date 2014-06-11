@@ -49,6 +49,23 @@ $ cp -rf <3a repo path>/code/user-admin/user-session/src/main/configuration/* ./
 $ cp -rf <3a repo path>/code/user-admin/user-persistence/src/main/configuration/* ./
 ```
 
+#### Update configuration files
+
+  Before you make a build you need to make some changes in configuration files copied inside $AGNIE_HOME as well as some changes are required to be done inside code.
+
+Note: Where ever you see some string enclosed inside "< string >". There you are expected to replace the contents with your own values.
+
+* (required before build) Update "$AGNIE_HOME/global/config/init-db.properties". You need to update all properties with your own values. These values will be used to create top application as well as very first user of the system who will be the owner and admin of top application. 
+* (required before build) We are using recaptch service for captch on signup page. You need to register your account at recaptcha [refer](https://www.google.com/recaptcha/intro/index.html) for your top domain that you have configured above. Once the registration is done you need to set public and private key given by recaptcha service at "$AGNIE_HOME/global/config/global-config.properties"
+* (required before build) You need to configure email account details using which system will send the mails. Mails such as account verification mail or forgot password mail. Configure those details at "<3a repo path>/code/user-persistence/src/main/resources/mail_accounts.json". Note: It is expected these account details from gmail or google apps server. As we have configured gmail server for the same. If you need to use some other server, you need to do required code change.
+* It is advisable to change default DB passwords that are set in code. If you need to update the password you need to do it at following locations.
+  - <3a repo path>/code/db/setupdb.sql
+  - <3a repo path>/code/user-persistence/src/main/resources/META-INF/persistence.xml
+  - <3a repo path>/code/user-session/src/main/resources/META-INF/persistence.xml 
+  - <3a repo path>/code/user-session/src/main/resources/SessionMyBatis.properties
+  - <3a repo path>/code/user-session/src/test/java/com/agnie/useradmin/session/ConnectionProvider.java 
+
+
 ### Build
 
 run sql setupdb.sql from following location "<3a repo path>/code/db" - This will create required db schema with required user.
@@ -88,6 +105,8 @@ $ cd <jetty home>/bin
 $ cp <3a repo path>/code/user-admin/userapp/target/userapp-1.0.war ../webapps/userapp.war
 $ ./jetty run
 ```
+
+Note: When you run application in dev mode through eclipse you will not see the 3A logo at TOP LEFT corner. But when you make a build and deploy the code in servlet container and test it, you will see Logo is being displayed.
 
 ### Eclipse Dev Setup
 * It is always a good practice to use same maven installation for command line build as well as for eclipse, you will see detail instruction at [refer](http://www.pandurangpatil.com/2014/03/install-eclipse-maven-plugin-and-import.html).
