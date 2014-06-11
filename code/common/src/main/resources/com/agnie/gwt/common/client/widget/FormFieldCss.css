@@ -1,0 +1,70 @@
+.form-field-container {
+	clear: both;
+	padding: 10px;
+	position: relative;
+}
+
+.input-field-container{
+	float:left;
+}
+
+.form-field-container:before, .form-field-container:after {
+    content: "";
+    display: table;
+}
+
+span.required {
+    color: #990000;
+}
+
+.form-field-label {
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 10px 0 0;
+    text-align: right;
+    width: 180px;
+    color: #444444;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field-input {
+	float: left;
+}
+
+.form-field-label, input, button, select, textarea  {
+    font-family: "Avant Garde", "Century Gothic", "Avant Garde Gothic", "URW Gothic L", helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.form-field-error {
+   border: 1px solid red !important;
+   box-shadow: 0 1px 3px peru inset !important;
+   border-radius: 5px 5px 5px 5px !important;
+}
+
+.form-field-desc{
+	font-size: 12px;
+	font-style: italic;
+	color: gray;
+}
+
+.form-field-error-text {
+	clear: both;
+    background-color: transparent;
+    background-image: none;
+    border: medium none;
+    line-height: 16px;
+    margin-bottom: 5px;
+    padding: 0;
+    margin-top: 5px;
+    color: #990000;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    list-style-type: none;
+}
+
+@external form-field-container, form-field-label, form-field-error, required, form-field-error-text, form-field-input, input-field-container, form-field-desc;

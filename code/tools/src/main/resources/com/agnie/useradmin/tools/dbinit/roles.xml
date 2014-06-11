@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roles>
+	<!-- All Application level roles -->
+	<role>
+		<name>Regular-User</name>
+		<description>Regular User to admin.agnie.co.in application
+		</description>
+		<authLevel>APPLICATION</authLevel>
+		<permissions>
+			<permission>perm_app_create</permission>
+		</permissions>
+	</role>
+	<role>
+		<name>Agnie-User-Administrator</name>
+		<description>This role is not supposed to be assigned to any one out
+			side Agnie. User will be able create new user's as well as manage
+			them</description>
+		<authLevel>APPLICATION</authLevel>
+		<permissions>
+			<permission>perm_user_create</permission>
+			<permission>perm_user_view</permission>
+			<permission>perm_user_delete</permission>
+			<permission>perm_user_edit_general</permission>
+			<permission>perm_user_edit_resetpwd</permission>
+		</permissions>
+	</role>
+	<role>
+		<name>Application-User-Administrator</name>
+		<description>User will be able create new user's, view user details
+			and reset use's password.</description>
+		<authLevel>APPLICATION</authLevel>
+		<permissions>
+			<permission>perm_user_create</permission>
+			<permission>perm_user_view</permission>
+			<permission>perm_user_edit_resetpwd</permission>
+		</permissions>
+	</role>
+	<!-- All Application level roles ends here -->
+	<!-- All Admin Application level roles -->
+	<role>
+		<name>Context-Creator</name>
+		<description>Regular User who can create the context.
+		</description>
+		<authLevel>ADMIN_APP</authLevel>
+		<permissions>
+			<permission>perm_app_edit_ctxt_create</permission>
+		</permissions>
+	</role>
+	<role>
+		<name>Dev-Manager</name>
+		<description>Developer who decides which permissions need to be
+			defined to be used into system. As well as define the roles.
+		</description>
+		<authLevel>ADMIN_APP</authLevel>
+		<permissions>
+			<permission>perm_app_edit_permission_create</permission>
+			<permission>perm_app_edit_permission_edit</permission>
+			<permission>perm_app_edit_permission_view</permission>
+			<permission>perm_app_edit_permission_delete</permission>
+			<permission>perm_app_edit_role_create</permission>
+			<permission>perm_app_edit_role_edit</permission>
+			<permission>perm_app_edit_role_view</permission>
+			<permission>perm_app_edit_role_delete</permission>
+		</permissions>
+	</role>
+	<role>
+		<name>Application-Super-Admin</name>
+		<description>Super administrator who can manage roles, edit
+			application settings, create context, see the list of contexts and
+			manage user registration and their application and admin roles.
+		</description>
+		<authLevel>ADMIN_APP</authLevel>
+		<permissions>
+			<permission>perm_app_edit_permission_view</permission>
+			<permission>perm_app_edit_role_create</permission>
+			<permission>perm_app_edit_role_edit</permission>
+			<permission>perm_app_edit_role_view</permission>
+			<permission>perm_app_edit_role_delete</permission>
+			<permission>perm_app_edit_setting_edit_gen</permission>
+			<permission>perm_app_edit_setting_view</permission>
+			<permission>perm_app_edit_ctxt_create</permission>
+			<permission>perm_app_edit_ctxt_list</permission>
+			<permission>perm_app_edit_user_reg</permission>
+			<permission>perm_app_edit_user_dereg</permission>
+			<permission>perm_app_edit_user_rolemgmt</permission>
+			<permission>perm_app_edit_user_admin_rolemgmt</permission>
+		</permissions>
+	</role>
+	<role>
+		<name>Application-Admin</name>
+		<description>Administrator who can manage roles, edit
+			application settings and see the list of contexts.
+		</description>
+		<authLevel>ADMIN_APP</authLevel>
+		<permissions>
+			<permission>perm_app_edit_permission_view</permission>
+			<permission>perm_app_edit_role_create</permission>
+			<permission>perm_app_edit_role_edit</permission>
+			<permission>perm_app_edit_role_view</permission>
+			<permission>perm_app_edit_role_delete</permission>
+			<permission>perm_app_edit_setting_edit_gen</permission>
+			<permission>perm_app_edit_setting_view</permission>
+			<permission>perm_app_edit_ctxt_list</permission>
+		</permissions>
+	</role>
+	<role>
+		<name>Appplication-User-Manager</name>
+		<description>User manager who can view the list or roles and
+			manage
+			user registration and their application and admin roles.
+		</description>
+		<authLevel>ADMIN_APP</authLevel>
+		<permissions>
+			<permission>perm_app_edit_permission_view</permission>		
+			<permission>perm_app_edit_role_view</permission>
+			<permission>perm_app_edit_user_reg</permission>
+			<permission>perm_app_edit_user_dereg</permission>
+			<permission>perm_app_edit_user_rolemgmt</permission>
+		</permissions>
+	</role>
+	<!-- All Admin Application level roles ends here -->
+	<!-- All Admin Context level roles -->
+	<role>
+		<name>Context-Super-User</name>
+		<description>Context Super user who can change context details, manage
+			user registration and modify user's context roles and admin roles.
+		</description>
+		<authLevel>ADMIN_CTX</authLevel>
+		<permissions>
+			<permission>perm_app_edit_ctxt_edit_setting_edit</permission>
+			<permission>perm_app_edit_ctxt_edit_setting_view</permission>
+			<permission>perm_app_edit_ctxt_edit_user_reg</permission>
+			<permission>perm_app_edit_ctxt_edit_user_dereg</permission>
+			<permission>perm_app_edit_ctxt_edit_user_rolemgmt</permission>
+			<permission>perm_app_edit_ctxt_edit_user_admin_rolemgmt</permission>
+			<permission>perm_app_edit_ctxt_role_view</permission>
+			<permission>perm_app_edit_ctxt_admin_role_view</permission>
+		</permissions>
+	</role>
+	<role>
+		<name>Context-User-Manager</name>
+		<description>Context user manager who can manage
+			user registration and
+			modify user's context roles and admin roles.
+		</description>
+		<authLevel>ADMIN_CTX</authLevel>
+		<permissions>
+			<permission>perm_app_edit_ctxt_edit_user_reg</permission>
+			<permission>perm_app_edit_ctxt_edit_user_dereg</permission>
+			<permission>perm_app_edit_ctxt_edit_user_rolemgmt</permission>
+			<permission>perm_app_edit_ctxt_role_view</permission>
+		</permissions>
+	</role>
+</roles>

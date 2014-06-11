@@ -1,0 +1,15 @@
+.app-widget {
+	background-color: white;
+	border: 2px solid #43A7EF;
+	border-radius: 10px 10px 10px 10px;
+	height: 140px;
+	margin: 5px;
+	text-align: center;
+	width: 190px;
+}
+
+.app-widget .title-div {
+	height: 20px;
+	margin-top: 10px;
+}
+

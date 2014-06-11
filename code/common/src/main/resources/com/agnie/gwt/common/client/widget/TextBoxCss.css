@@ -1,0 +1,17 @@
+.text-box-pan {
+	background: none repeat scroll 0 0 transparent;
+}
+
+.text-box-pan .text-box {
+	background-color: white;
+    border: 1px solid #CDCDCD;
+    border-radius: 4px 4px 4px 4px;
+    float: none;
+}
+
+.text-box-error{
+	border: 1px solid red !important;
+    box-shadow: 0 1px 3px peru inset !important;
+}
+
+@external text-box-pan, text-box, text-box-error;

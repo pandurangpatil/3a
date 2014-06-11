@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<!-- POM file generated with GWT webAppCreator -->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>user-admin</artifactId>
+		<groupId>open.agnie.useradmin</groupId>
+		<version>1.0</version>
+	</parent>
+	<groupId>open.agnie.useradmin</groupId>
+	<artifactId>userapp</artifactId>
+	<packaging>war</packaging>
+	<version>1.0</version>
+	<name>User Administration Fornt end module</name>
+	<properties>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+			<version>2.1.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>open.agnie.useradmin</groupId>
+			<artifactId>service</artifactId>
+			<version>1.0</version>
+			<!-- If service is hosted on different server then keep scope as provided -->
+			<!-- <scope>provided</scope> -->
+		</dependency>
+		<!-- TODO: We need to get rid of this spy mem cached overriding. As it 
+			is getting added through agnie-gwt-common, and it is added in provided scope. 
+			even memcached library is getting added as provided. -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.2.0.Final</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtpluginVersion}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>test</goal>
+							<goal>i18n</goal>
+							<goal>generateAsync</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>css-generation</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>css</goal>
+						</goals>
+					</execution>
+				</executions>
+				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
+					documentation at codehaus.org -->
+				<configuration>
+					<runTarget>useradmin.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<i18nMessagesBundles>
+						<i18nMessagesBundle>com.agnie.useradmin.login.client.Messages</i18nMessagesBundle>
+						<i18nMessagesBundle>com.agnie.useradmin.common.client.Messages</i18nMessagesBundle>
+						<i18nMessagesBundle>com.agnie.useradmin.main.client.Messages</i18nMessagesBundle>
+						<i18nMessagesBundle>com.agnie.useradmin.landing.client.Messages</i18nMessagesBundle>
+						<i18nMessagesBundle>com.agnie.useradmin.contextmgr.client.Messages</i18nMessagesBundle>
+					</i18nMessagesBundles>
+					<i18nConstantsWithLookupBundles>
+						<i18nConstantsWithLookupBundle>com.agnie.useradmin.common.client.ErrorMessages</i18nConstantsWithLookupBundle>
+					</i18nConstantsWithLookupBundles>
+					<cssFiles>
+						<cssFile>com/agnie/useradmin/common/client/base/BasePageCss.css</cssFile>
+						<cssFile>com/agnie/useradmin/common/client/ui/AccountCss.css</cssFile>
+						<cssFile>com/agnie/useradmin/login/client/ui/LoginPageCss.css</cssFile>
+						<cssFile>com/agnie/useradmin/landing/client/ui/LandingPageCss.css</cssFile>
+						<cssFile>com/agnie/useradmin/landing/client/ui/ApplicationWidgetCss.css</cssFile>
+						<cssFile>com/agnie/useradmin/main/client/ui/MainPageCss.css</cssFile>
+						<cssFile>com/agnie/useradmin/contextmgr/client/ui/CtxMgrPageCss.css</cssFile>
+						<cssFile>com/agnie/useradmin/common/widget/RolesManagerCss.css</cssFile>
+					</cssFiles>
+				</configuration>
+
+			</plugin>
+
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>war</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<packagingExcludes>WEB-INF/classes/com/agnie/useradmin/**/*</packagingExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<id>spy</id>
+			<name>Spy Repository</name>
+			<layout>default</layout>
+			<url>http://files.couchbase.com/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

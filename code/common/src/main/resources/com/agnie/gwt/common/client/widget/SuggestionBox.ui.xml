@@ -1,0 +1,10 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:c='urn:import:com.google.gwt.user.cellview.client'>
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.SuggestionBoxResources' />
+
+	<g:HTMLPanel ui:field="mainPan" addStyleNames='{res.css.mainPan}'>
+			<g:TextBox ui:field="search" addStyleNames='{res.css.search}'></g:TextBox>
+			<c:CellList ui:field='list' addStyleNames='{res.css.list}' />
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,63 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+
+	<ui:with field='msg' type='com.agnie.useradmin.landing.client.Messages' />
+	<ui:with type="com.agnie.useradmin.landing.client.ui.LandingPageResources"
+		field="landingPageRes"></ui:with>
+
+	<ui:style>
+	.fgtActionPanel {
+		clear: both;
+		margin: 40px 0 0 155px;
+	}
+	</ui:style>
+
+	<g:HTMLPanel addStyleNames="{landingPageRes.css.landingPage} landing">
+		<agcw:FormPanel ui:field="formPanel" label="{msg.updateProfile}">
+			<agcw:formcontainer>
+				<g:HTMLPanel ui:field="formCont">
+					<agcw:FormFieldContainer label="{msg.userName}">
+						<agcw:inputfieldcontainer>
+							<g:Label ui:field="userName"></g:Label>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer label="{msg.email}">
+						<agcw:inputfieldcontainer>
+							<g:Label ui:field="email"></g:Label>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer label="{msg.title}"
+						desc="Title you would like to prefix with your name" ui:field="titleContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="title"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer label="{msg.firstName}"
+						ui:field="firstNameContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="firstName"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer label="{msg.lastName}"
+						ui:field="lastNameContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="lastName"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer label="{msg.profImg}"
+						desc="Your profile picture" ui:field="profImgContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="profImg"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<div class='{style.fgtActionPanel}'>
+						<g:Button ui:field="submitBtn" text='{msg.update}'
+							addStyleNames="blue-button"></g:Button>
+						<g:Button ui:field="cancelBtn" text='{msg.cancel}'
+							addStyleNames="grey-button"></g:Button>
+					</div>
+				</g:HTMLPanel>
+			</agcw:formcontainer>
+		</agcw:FormPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

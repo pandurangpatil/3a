@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<digester-rules>
+	<pattern value="permissions/permission">
+		<object-create-rule
+			classname="com.agnie.useradmin.persistance.server.entity.Permission" />
+		<set-properties-rule />
+		<call-method-rule pattern="name" methodname="setName"
+			paramtypes="java.lang.String" paramcount="0" />
+		<call-method-rule pattern="code" methodname="setCode"
+			paramtypes="java.lang.String" paramcount="0" />
+		<call-method-rule pattern="description" methodname="setDescription"
+			paramtypes="java.lang.String" paramcount="0" />
+		<call-method-rule pattern="authLevel" methodname="setLevel"
+			paramtypes="com.agnie.useradmin.persistance.client.enums.AuthLevel"
+			paramcount="0" />
+		<set-next-rule methodname="add"
+			paramtype="com.agnie.useradmin.persistance.server.entity.Permission" />
+	</pattern>
+</digester-rules>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Login'>
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.agnie.gwt.common.AgnieCommon" />
+	<inherits name="com.agnie.useradmin.persistance.usermgmt" />
+	<inherits name="com.agnie.useradmin.common.Common" />
+	<extend-property name="locale" values="en" />
+	<extend-property name="locale" values="hi" />
+	<extend-property name="locale" values="mr" />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+	<entry-point class="com.agnie.useradmin.login.client.Login" />
+	<set-configuration-property name="CssResource.style"
+		value="pretty" />
+	<replace-with
+		class="com.agnie.useradmin.login.client.mvp.BrowserRootPanelFactory">
+		<when-type-is class="com.agnie.useradmin.login.client.mvp.RootPanelFactory" />
+	</replace-with>
+	<replace-with class="com.agnie.useradmin.login.client.mvp.DesktopFactory">
+		<when-type-is class="com.agnie.useradmin.login.client.mvp.PlatformFactory" />
+		<when-property-is name="formfactor" value="desktop" />
+	</replace-with>
+
+	<replace-with class="com.agnie.useradmin.login.client.mvp.MobileFactory">
+		<when-type-is class="com.agnie.useradmin.login.client.mvp.PlatformFactory" />
+		<when-property-is name="formfactor" value="mobile" />
+	</replace-with>
+
+	<replace-with class="com.agnie.useradmin.login.client.mvp.TabletFactory">
+		<when-type-is class="com.agnie.useradmin.login.client.mvp.PlatformFactory" />
+		<when-property-is name="formfactor" value="tablet" />
+	</replace-with>
+</module>

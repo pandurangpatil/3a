@@ -1,28 +1,28 @@
+#java specific
 *.class
 
-# Package Files #
-*.jar
-*.war
+#python specific
+*.pyc
 
-# gwt caches and compiled units #
-war/gwt_bree/
-gwt-unitCache/
+#netbeans ignore personal stuff 
+nbproject/private/
 
-# boilerplate generated classes #
-.apt_generated/
+# maven
+target/
 
-# more caches and things from deploy #
-war/WEB-INF/deploy/
-war/WEB-INF/classes/
+#eclipse
+*.pydevproject
+.project
+.metadata
+.classpath
+.settings/
 
-#compilation logs
-.gwt/
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
 
-#caching for already compiled files
-gwt-unitCache/
-
-#gwt junit compilation files
-www-test/
-
-#old GWT (1.5) created this dir
-.gwt-tmp/
+#GWT
+.gwt

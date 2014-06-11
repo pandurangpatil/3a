@@ -1,0 +1,36 @@
+/*******************************************************************************
+* Copyright (c) 2014 Agnie Technologies.
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the GNU Public License v3.0
+* which accompanies this distribution, and is available at
+* http://www.gnu.org/licenses/gpl.html
+* 
+* Contributors:
+*     Agnie Technologies - initial API and implementation
+*******************************************************************************/
+#-------------------------------------------------------------------------------
+# copyright-to-be-replaced
+#-------------------------------------------------------------------------------
+.search-box {
+    border: 1px solid #BABABA;
+    min-height: 30px;
+    min-width: 200px;
+    text-align: left;
+}
+.search-box .text-box {
+	font-family:"Avant Garde","Century Gothic","Avant Garde Gothic","URW Gothic L",helvetica,sans-serif;
+	border:1px solid white;
+	background-color:white;
+	width:80%;
+	height:80%;
+	float: left;
+}
+.search-box .input-widget-container {
+	float:right;
+	padding: 2px;
+}
+.search-box .gwt-TextBox {
+	width:80% !important;
+	height:80% !important;
+}
+@external search-box,text-box,input-widget-container;

@@ -1,0 +1,15 @@
+{
+    "byApplication": {
+        "base": "select pm from Permission pm",
+        "where": "pm.application.domain = :domain",        
+        "filter": {
+            "search": "( pm.name LIKE :search OR pm.code LIKE :search OR pm.description LIKE :search )",
+            "level": "pm.level = :level"
+        },
+        "mapping" : {
+        	"name": "pm.name",
+        	"description": "pm.description",
+        	"code": "pm.code"
+        }
+    }
+}

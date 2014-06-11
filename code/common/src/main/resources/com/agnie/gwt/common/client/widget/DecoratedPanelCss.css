@@ -1,0 +1,71 @@
+@sprite .dec-panel .close-btn {
+	gwt-image: 'closeBtn';
+	cursor:pointer;
+}
+
+@sprite .dec-panel .min-btn {
+	gwt-image: 'minBtn';
+}
+
+@sprite .dec-panel .max-btn {
+	gwt-image: 'maxBtn';
+}
+
+.dec-panel {
+	border-radius: 5px 5px 5px 5px;
+	border: 10px solid rgba(82, 82, 82, 0.698);
+	position: relative;
+    z-index: 21;
+}
+
+.content-pan {
+	height: 90%;
+	padding: 10px;
+	background: none repeat scroll 0 0 #EEEEEE;
+}
+
+.dec-panel .header-pan {
+	height: 10%;
+	padding: 10px;
+	min-height: 25px;
+	background: #7d7e7d; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+}
+
+.dec-panel .header-pan a {
+	cursor: pointer;
+	float: right;
+	margin: 0 auto;
+}
+
+.dec-panel .header-pan a:hover {
+	text-decoration: none;
+}
+
+.dec-panel .header-pan span {
+	margin-top: 1px;
+	font-size: 17px;
+	font-weight: bold;
+	float: left;
+	color: white;
+	text-shadow: 0px -1px black;
+}
+
+.whiteout {
+	background-color: rgba(255, 255, 255, 0.8);
+	height: 100%;
+	left: 0;
+	opacity: 0.9;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+}
+
+@external dec-panel, content-pan, header-pan, close-btn, min-btn, max-btn, whiteout;

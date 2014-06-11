@@ -1,0 +1,14 @@
+{
+    "byApplication": {
+        "base": "select rl from Role rl",
+        "where": "rl.application.domain = :domain",        
+        "filter": {
+            "search": "( rl.name LIKE :search OR rl.description LIKE :search )",
+            "level": "rl.level = :level"
+        },
+        "mapping" : {
+        	"name": "rl.name",
+        	"description": "rl.description"
+        }
+    }
+}

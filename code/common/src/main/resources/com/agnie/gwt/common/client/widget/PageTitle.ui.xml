@@ -1,0 +1,10 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.PageTitleResources' />
+	
+	<g:HTMLPanel addStyleNames='{res.css.pageTitlePan}'>
+			<g:HTMLPanel ui:field="titleImg" addStyleNames='{res.css.titleImg}'></g:HTMLPanel>
+			<span ui:field="pageTitle" class='{res.css.pageTitle}'></span>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,13 @@
+{
+    "byApplication": {
+        "base": "select ctx from Context ctx",
+        "where": "ctx.status = :status and ctx.application.domain = :domain",        
+        "filter": {
+            "search": "( ctx.name LIKE :search OR ctx.description LIKE :search )"
+        },
+        "mapping" : {
+        	"name": "ctx.name",
+        	"description": "ctx.description"
+        }
+    }
+}

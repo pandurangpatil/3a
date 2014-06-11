@@ -1,0 +1,17 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+	<ui:style>
+	.menu-domain {
+		float: left;
+		color: black;
+		text-shadow: 0px 1px darkgray;
+	}
+	</ui:style>
+	<g:HTMLPanel height="45px">
+		<g:HTMLPanel addStyleNames="menu-pan">
+			<g:HTMLPanel addStyleNames="tabbar-pan" ui:field="tabbarPan"></g:HTMLPanel>
+			<div class="{style.menu-domain}" ui:field="domain"></div>
+			<g:HTMLPanel addStyleNames="search-pan" ui:field="searchPan"></g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

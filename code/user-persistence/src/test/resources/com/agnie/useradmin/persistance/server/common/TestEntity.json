@@ -1,0 +1,21 @@
+{
+	"active": {
+        "base": "SELECT te FROM TestEntity te",
+        "where": "te.status='ACTIVE'",
+        "filter": {
+            "search": "te.fname LIKE '%:search%'",
+            "lname": "te.lname = :lname"
+        }
+    },
+    "all": {
+        "base": "SELECT te FROM TestEntity te",
+        "filter": {
+            "search": "te.fname LIKE '%:search%'",
+            "lname": "te.lname = :lname"
+        },
+        "mapping": {
+        	"fname" : "te.fname",
+        	"lname" : "te.lname"
+        }
+    }
+}

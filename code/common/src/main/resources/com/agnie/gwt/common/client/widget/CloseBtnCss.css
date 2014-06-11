@@ -1,0 +1,10 @@
+.close-widget {
+	
+}	
+
+@sprite .close-widget .img{
+	gwt-image: 'crossImg';
+	cursor: pointer;
+}
+
+@external close-widget, img;

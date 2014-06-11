@@ -1,0 +1,28 @@
+{
+    "all": {
+        "base": "SELECT us FROM User us",
+        "filter": {
+            "search": "( us.firstName LIKE :search OR us.lastName LIKE :search OR us.emailId LIKE :search OR us.userName LIKE :search )",
+            "status": "us.status = :status"
+        }
+    },
+    "byApplication": {
+        "base": "select upr.user from UserApplicationRegistration upr",
+        "where": "upr.user.status=:userstatus",        
+        "filter": {
+            "search": "( upr.user.firstName LIKE :search OR upr.user.lastName LIKE :search OR upr.user.emailId LIKE :search OR upr.user.userName LIKE :search )",
+            "status": "upr.status = :status",
+            "domain": "upr.app.domain = :domain"
+        }
+    },
+    "byApplicationContext": {
+        "base": "select cr.user from ContextRole cr",
+        "where": "cr.user.status='ACTIVE'",        
+        "filter": {
+            "search": "( cr.user.firstName LIKE :search OR cr.user.lastName LIKE :search OR cr.user.emailId LIKE :search OR cr.user.userName LIKE :search )",
+            "status": "cr.status = :status",
+            "domain": "cr.app.domain = :domain",
+            "context": "cr.context.name= :context"
+        }
+    }
+}

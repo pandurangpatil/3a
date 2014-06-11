@@ -1,0 +1,69 @@
+.header-useradmin .header-right-pan .language {
+	margin-top: 10px;
+}
+
+/*-----------------New contentcss from login.html starts here------------------------*/
+
+.content {
+	padding-top:5px;
+}
+
+/*-----------------New contentcss from login.html ends here------------------------*/
+
+/*-----------------New css from login.html ends here------------------------*/
+.login {
+	height: 250px;
+	width: 460px;
+	border: solid;
+}
+
+.login .form-field-label {
+	width: 150px;
+}
+
+.login input[type="text"],.login input[type="password"] {
+	width: 230px;
+}
+
+.login-signup-link {
+	margin-left: 50px;
+	padding: 10px 0;
+}
+
+.login-btn-panel {
+	margin-left: 175px;
+	padding: 10px 0;
+}
+
+.login-fg-pwd {
+	margin-left: 100px;
+	padding: 10px 0;
+}
+
+.fgt-action-panel {
+	margin: 10px 0 10px 201px;
+}
+
+.signup-content {
+	margin: 0 auto;
+	width: 575px;
+	padding: 30px;
+}
+
+.signup-content .formCnt .form-field-container {
+	padding: 5px 9px 10px;
+    width: 220px;
+}
+
+.signup-content .formCnt .form-field-error {
+    margin-top: 5px;
+}
+
+.signup-content .formCnt .form-field-label {
+	width: 200px !important;
+}
+
+.signup-content .formCnt input[type="text"],.signup-content .formCnt input[type="password"]{
+    width: 208px !important;
+}
+

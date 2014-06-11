@@ -1,0 +1,1 @@
+SELECT c.NAME FROM UserAdmin.USERAUTHSESSION us JOIN UserAdmin.USER u ON u.ID = us.USERID AND us.ID = 'session' JOIN UserAdmin.APPLICATION a ON a.OWNER_ID = us.USERID AND a.DOMAIN = 'domain' JOIN UserAdmin.CONTEXT c ON c.OWNER_ID = us.USERID AND c.APPLICATION_ID = a.ID AND c.NAME = 'context'

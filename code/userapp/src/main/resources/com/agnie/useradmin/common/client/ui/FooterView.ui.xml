@@ -1,0 +1,100 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='msg' type='com.agnie.useradmin.common.client.Messages' />
+	<ui:style>
+	.footer-logo-wrapper {
+		background: none repeat scroll 0 0 white;
+		border-radius: 0 0 15px 15px;
+		box-shadow: 0 3px 4px 0 gray inset;
+		height: 70px;
+		margin-top: 10px;
+		padding-top: 15px;
+	}
+	
+	.other-links {
+		color: #FFFFFF;
+		list-style-type: none;
+	}
+	
+	.other-links h4,.other-links a,.other-links a:focus,.other-links a:active
+		{
+		color: #FFFFFF;
+	}
+	
+	.other-links a:hover {
+		color: gray;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="footer-useradmin">
+			<div class="footerw">
+				<div style="float: left;">
+					<span class="copyright">
+						<ui:text from='{msg.copyright}' />
+					</span>
+					<span class="comodo"></span>
+				</div>
+				<div style="float: left;">
+					<ul class="{style.other-links}">
+						<li>
+							<h4>PRODUCT</h4>
+						</li>
+						<li>
+							<a href="http://open3a.agnie.net/#HOME" target="3a">
+								Introduction
+							</a>
+						</li>
+						<li>
+							<a href="http://open3a.agnie.net/#DEMO" target="3a"> Demo
+							</a>
+						</li>
+						<li>
+							<a href="http://open3a.agnie.net/#DEV" target="3a"> API
+							</a>
+						</li>
+						<li>
+							<a href="http://open3a.agnie.net/#FEED_BACK" target="3a">
+								Feedback
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div style="float: left;">
+					<ul class="{style.other-links}">
+						<li>
+							<h4>COMPANY</h4>
+						</li>
+						<li>
+							<a href="http://www.agnie.net/#HOME" target="company"> Home
+							</a>
+						</li>
+						<li>
+							<a href="http://www.agnie.net/#TEAM" target="company"> Team
+							</a>
+						</li>
+						<li>
+							<a href="http://www.agnie.net/#CONTACT" target="company"> Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="design">
+					<div>
+						<span class="design-by">
+							<ui:text from='{msg.designby}' />
+						</span>
+						<a class="design-by-sign" target="_blank" href="http://twosigns.com/">
+							<ui:text from='{msg.twosigns}' />
+						</a>
+					</div>
+					<div class="{style.footer-logo-wrapper}">
+						<a target="_blank" href="http://www.agnie.net/">
+							<div class="footer-logo">
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

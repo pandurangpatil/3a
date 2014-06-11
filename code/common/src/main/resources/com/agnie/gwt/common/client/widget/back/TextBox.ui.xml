@@ -1,0 +1,13 @@
+<!--
+  copyright-to-be-replaced
+-->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.TextBoxResources' />
+
+
+	<g:HTMLPanel addStyleNames='{res.css.textBoxPan}'>
+		<g:TextBox ui:field="textBox" addStyleNames='{res.css.textBox}'></g:TextBox>
+	</g:HTMLPanel>
+</ui:UiBinder>

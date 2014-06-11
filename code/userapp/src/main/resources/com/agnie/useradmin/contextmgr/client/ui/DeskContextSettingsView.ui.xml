@@ -1,0 +1,32 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+	<ui:with field='msg' type='com.agnie.useradmin.contextmgr.client.Messages' />
+	<ui:with type="com.agnie.useradmin.contextmgr.client.ui.CtxMgrPageResources"
+		field="ctxMgrPageRes"></ui:with>
+	<ui:style>
+	.flt-lft {
+		float: left;
+	}
+	
+	.page-content {
+		width: 475px;
+		margin: 0 auto;
+	}
+	</ui:style>
+	<g:HTMLPanel addStyleNames="useradmin">
+		<agcw:PageTitle ui:field="pageTitle" pageTitle='{msg.context_settings}'></agcw:PageTitle>
+		<div class="{ctxMgrPageRes.css.tblBtnPan}">
+			<div class="{style.page-content}">
+				<div class="clearfix">
+					<agcw:FormFieldContainer label='{msg.context}'>
+						<agcw:inputfieldcontainer>
+							<g:HTMLPanel>
+								<g:Label ui:field="context" addStyleNames="{style.flt-lft}"></g:Label>
+							</g:HTMLPanel>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

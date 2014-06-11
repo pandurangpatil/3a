@@ -1,0 +1,24 @@
+.landing-page {
+	margin: 0 auto 0;
+	width: 600px;
+}
+
+.landing-page .input-field-container{
+	width: 300px;
+}
+
+.create-new-app {
+	
+}
+
+.user-def-stat {
+	height: 30px;
+}
+
+.user-def-stat .custom-list-box-border {
+	position: relative;
+	z-index: 1;
+}
+
+@external user-def-stat, custom-list-box-border, input-field-container;
+

@@ -1,0 +1,85 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+
+	<ui:with field='msg' type='com.agnie.useradmin.landing.client.Messages' />
+	<ui:with type="com.agnie.useradmin.landing.client.ui.LandingPageResources"
+		field="landingPageRes"></ui:with>
+	<ui:style>
+	.fgtActionPanel {
+		margin: 35px 0 0 155px;
+	}
+	</ui:style>
+
+	<g:HTMLPanel addStyleNames="{landingPageRes.css.landingPage} landing">
+		<agcw:FormPanel ui:field="formPanel" label="{msg.createNewApp}">
+			<agcw:formcontainer>
+				<g:HTMLPanel ui:field="formCont">
+					<!-- TODO: temp disabling asking user to select customer profile to make on boarding easier  -->
+					<!-- <agcw:FormFieldContainer required="true"
+						label="{msg.custProf}" desc="Agnie customer profile" ui:field="custProfileContainer">
+						<agcw:inputfieldcontainer>
+							<g:HTMLPanel ui:field="custProfileCont"
+								addStyleNames="{landingPageRes.css.userDefStat}"></g:HTMLPanel>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer> -->
+					<agcw:FormFieldContainer required="true"
+						desc="domain name e.g. test.agnie.net" label="{msg.domain}"
+						ui:field="domainContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="domain"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer required="true"
+						desc="Company / Product Name" ui:field="bussNameContainer" label="{msg.bussName}">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="bussName"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer required="true"
+						desc="Url where user will be redirected back after login" label="{msg.homePageUrl}"
+						ui:field="homePageUrlContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="homePageUrl"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer label="{msg.iconUrl}"
+						desc="Icon of your product that you want to get displayed. Size should be (w-100 X h-55) pixcel."
+						ui:field="iconUrlContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="iconUrl"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer required="true"
+						desc="Email id where all notifications related to application will be sent"
+						label="{msg.supportCnt}" ui:field="supportCntContainer">
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="supportCnt"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer required="true"
+						desc="Default registration status of newly registered user with application"
+						label="{msg.defAppStatus}">
+						<agcw:inputfieldcontainer>
+							<g:HTMLPanel ui:field="defAppStatCont"
+								addStyleNames="{landingPageRes.css.userDefStat}"></g:HTMLPanel>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer required="true"
+						desc="Default registration status of newly registered user with context"
+						label="{msg.defContextStatus}">
+						<agcw:inputfieldcontainer>
+							<g:HTMLPanel ui:field="defContextStatCont"
+								addStyleNames="{landingPageRes.css.userDefStat}"></g:HTMLPanel>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<div class='{style.fgtActionPanel}'>
+						<g:Button ui:field="submitBtn" text='{msg.save}'
+							addStyleNames="blue-button"></g:Button>
+						<g:Button ui:field="cancelBtn" text='{msg.cancel}'
+							addStyleNames="grey-button"></g:Button>
+					</div>
+				</g:HTMLPanel>
+			</agcw:formcontainer>
+		</agcw:FormPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

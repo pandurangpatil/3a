@@ -1,0 +1,15 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.DecoratedPanelResources' />
+
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="headerPan" addStyleNames='{res.css.headerPan}'>
+			<span  ui:field="headerText"></span>
+			<g:Anchor ui:field="close" addStyleNames='{res.css.closeBtn}'></g:Anchor>
+			<g:Anchor ui:field="minimize" addStyleNames='{res.css.minBtn}'></g:Anchor>
+			<g:Anchor ui:field="maxmize" addStyleNames='{res.css.maxBtn}'> </g:Anchor>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="contentPan" addStyleNames='{res.css.contentPan}'></g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,12 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:c='urn:import:com.google.gwt.user.cellview.client'>
+
+	<g:HTMLPanel>
+		<div style="align:left">
+			<c:CellTable ui:field='table' width="100%" />
+		</div>
+		<div>
+			<c:SimplePager ui:field="pager" location="CENTER"></c:SimplePager>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

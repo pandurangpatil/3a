@@ -1,0 +1,53 @@
+.custom-list-box-pan {
+}
+
+.custom-list-box-border {
+	border: 2px solid gray;
+	border-radius: 5px;
+	background: none repeat scroll 0 0 white;
+	box-shadow: 1px 1px 7px 1px gray;
+	padding: 5px;
+}
+
+.custom-list-box-pan .cell-list-separator {
+	border-top: 1px solid gray;
+}
+
+.custom-list-box-pan .custom-list-title-pan {
+	cursor:pointer;
+	min-height: 20px;
+	font-size: 14px;
+	font-family: "Avant Garde", "Century Gothic", "Avant Garde Gothic",
+		"URW Gothic L", helvetica, sans-serif;
+}
+
+.custom-list-box-pan .custom-list-title-pan span {
+	float: left;
+}
+
+.custom-list-box-pan .custom-list-title {
+	font-family: "Avant Garde", "Century Gothic", "Avant Garde Gothic",
+		"URW Gothic L", helvetica, sans-serif;
+	float: left;
+}
+
+@sprite .custom-list-box-pan .custom-list-img-up {
+	gwt-image: 'arrowDarkUpImg';
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	margin-top: 6px;
+	height: 5px;
+	width: 9px;
+}
+
+@sprite .custom-list-box-pan .custom-list-img {
+	gwt-image: 'arrowDarkImg';
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	margin-top: 6px;
+	height: 5px;
+	width: 9px;
+}
+@external custom-list-box-border, cell-list-separator, custom-list-box-pan, custom-list-title-pan, custom-list-title, custom-list-img,custom-list-img-up;

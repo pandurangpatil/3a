@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='usermgmt'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+	<inherits name='com.agnie.useradmin.session.usersession'></inherits>
+	<inherits name="org.hibernate.validator.HibernateValidator" />
+	<inherits name="com.sfeir.captcha.ReCaptcha" />
+	<extend-property name="locale" values="en" />
+	<extend-property name="locale" values="hi" />
+	<extend-property name="locale" values="mr" />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<replace-with
+		class="com.agnie.useradmin.common.client.helper.UserAdminValidatorFactory">
+		<when-type-is class="javax.validation.ValidatorFactory" />
+	</replace-with>
+</module>

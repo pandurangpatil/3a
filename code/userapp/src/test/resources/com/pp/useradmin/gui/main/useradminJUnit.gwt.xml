@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<!-- Inherit our applications main module. -->
+	<inherits name='com.pp.useradmin.gui.main.Useradmin' />
+	<inherits name="com.pp.useradmin.common.common" />
+	<!-- Specify the path to any remote services. -->
+	<!-- <servlet path="/useradmin/greet" class="com.pp.useradmin.gui.server.GreetingServiceImpl" 
+		/> -->
+
+</module>

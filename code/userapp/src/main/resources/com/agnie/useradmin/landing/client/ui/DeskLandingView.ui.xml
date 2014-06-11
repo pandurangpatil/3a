@@ -1,0 +1,17 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'
+	xmlns:aucw='urn:import:com.agnie.useradmin.common.widget'>
+
+	<ui:with field='msg' type='com.agnie.useradmin.landing.client.Messages' />
+	<ui:with type="com.agnie.useradmin.landing.client.ui.LandingPageResources"
+		field="landingPageRes"></ui:with>
+
+	<ui:style>
+		.landingView {
+			margin-top: 10px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel addStyleNames="{style.landingView} landing">
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,48 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.AccountResources' />
+	<ui:with field='msg' type='com.agnie.gwt.common.client.Messages' />
+
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="accTitlePan" addStyleNames='{res.css.accTitlePan}'>
+			<span>
+				<ui:text from='{msg.welcome}'></ui:text>
+
+			</span>
+			<span ui:field="accTitle" class='{res.css.title}'></span>
+			<g:Image ui:field="accImg" addStyleNames='{res.css.img}'></g:Image>
+		</g:HTMLPanel>
+		<g:FocusPanel ui:field="accDropPan" addStyleNames="{res.css.accDropPan}">
+			<g:HTMLPanel>
+				<div ui:field="accTriangle" class="{res.css.accTrianlge}"></div>
+				<div ui:field="accDropPanBody" class='{res.css.accDropPanBody}'>
+					<table>
+						<tr>
+							<td style="width: 100px; height: 100px;  padding: 5px 5px 0px;">
+								<g:Image ui:field="accUserImg"  styleName='{res.css.accUserImg}'></g:Image>
+							</td>
+							<td>
+								<g:HTMLPanel ui:field="changePass" addStyleNames='{res.css.accDetElem}'>
+									<span>
+										<ui:text from='{msg.changePass}'></ui:text>
+									</span>
+								</g:HTMLPanel>
+								<g:HTMLPanel ui:field="modify" addStyleNames='{res.css.accDetElem}'>
+									<span>
+										<ui:text from='{msg.modify}'></ui:text>
+									</span>
+								</g:HTMLPanel>
+								<g:HTMLPanel ui:field="logout" addStyleNames='{res.css.accDetElem}'>
+									<span>
+										<ui:text from='{msg.logout}'></ui:text>
+									</span>
+								</g:HTMLPanel>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</g:HTMLPanel>
+		</g:FocusPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

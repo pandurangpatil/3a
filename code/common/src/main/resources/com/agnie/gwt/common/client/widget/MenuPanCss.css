@@ -1,0 +1,22 @@
+.menu-pan-context {
+	border: 1px solid #EAEAEA;
+    box-shadow: 1px 3px 5px black;
+    text-align: center;
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+
+.menu-pan-context .menu-item {
+	cursor:pointer;
+}
+
+.menu-pan-context .menu-item-disabled {
+	color: gray;
+	cursor: not-allowed;
+}
+
+.menuPan .menu-separator {
+	height:2px;
+	color: gray;
+}
+
+@external menu-pan-context, menu-item, menu-item-disabled, menu-separator;

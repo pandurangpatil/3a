@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.GreenButtonResources' />
+	<ui:with type="java.lang.String" field="moduleBaseUrl"></ui:with>	
+
+	<g:HTMLPanel ui:field="panel">
+		<table style="border: 0px; border-collapse: collapse;"
+			cellpadding="0">
+			<tr>
+				<td>
+					<img src="{moduleBaseUrl}images/transparent.png" class='{res.css.greenButtonLeft}' />
+				</td>
+				<td>
+					<div class='{res.css.greenButtonBody}'>
+						<g:Label ui:field="label"></g:Label>
+					</div>
+				</td>
+				<td>
+					<img src="{moduleBaseUrl}images/transparent.png" class='{res.css.greenButtonRight}' />
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder>

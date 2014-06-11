@@ -1,0 +1,44 @@
+.header-useradmin {
+	/*background: url("images/login-header.png") repeat-x scroll left top
+		transparent;*/
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(top, #fafafa 0%, #f4f4f4 67%, #e5e5e5 85%, #e5e5e5
+		97%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa),
+		color-stop(67%, #f4f4f4), color-stop(85%, #e5e5e5), height :  
+		          
+		       100px; color-stop (97%, #e5e5e5), color-stop(100%, #ffffff) );
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fafafa 0%, #f4f4f4 67%, #e5e5e5 85%,
+		#e5e5e5 97%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fafafa 0%, #f4f4f4 67%, #e5e5e5 85%, #e5e5e5
+		97%, #ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fafafa 0%, #f4f4f4 67%, #e5e5e5 85%, #e5e5e5
+		97%, #ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #fafafa 0%, #f4f4f4 67%, #e5e5e5 85%, #e5e5e5
+		97%, #ffffff 100%); /* W3C */
+	filter: progid :     DXImageTransform.Microsoft.gradient (    
+		        
+		         startColorstr =          
+		          '#fafafa', endColorstr =                     '#ffffff',
+		GradientType =     
+		        
+		      0 );
+	/* IE6-9 */
+}
+
+.fullpage {
+	background: #1C1E20; /* Old browsers */
+}
+
+.content {
+	background: none repeat scroll 0 0 #B5B5B5;
+	min-height: 70%;
+	padding-bottom: 20px;
+}
+
+
+.page-title{
+	color: black !important;
+	text-shadow: 1px 1px 1px rgb(230, 230, 230);
+}	

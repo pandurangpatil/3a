@@ -1,0 +1,35 @@
+<!--
+  copyright-to-be-replaced
+-->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.MessagePanelResources' />
+	<ui:with type="java.lang.String" field="moduleBaseUrl"></ui:with>
+	<ui:style>
+		.message {
+			color: white;
+			font-size: 15px;
+			font-weight: bold;
+			margin-left: 5px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel addStyleNames='{res.css.messagePan}'>
+		<g:HTMLPanel ui:field="messagePan">
+			<table width="100%">
+				<tr>
+					<td style="width: 25px;">
+						<img ui:field="img" src="{moduleBaseUrl}images/transparent.png"></img>
+					</td>
+					<td>
+						<g:HTML ui:field="message" addStyleNames="{style.message}"></g:HTML>
+					</td>
+					<td>
+						<g:Anchor ui:field="close" addStyleNames='{res.css.anchor}'></g:Anchor>
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

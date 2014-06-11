@@ -1,0 +1,19 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='userPermDet'
+		type="com.agnie.useradmin.persistance.shared.proxy.PermissionPx" />
+	<g:HTMLPanel>
+			<div>
+				Name:
+				<ui:text from='{userPermDet.getName}' />
+			</div>
+			<div>
+				Code:
+				<ui:text from='{userPermDet.getCode}' />
+			</div>
+			<div>
+				Description:
+				<ui:text from='{userPermDet.getDescription}' />
+			</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

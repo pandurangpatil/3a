@@ -1,0 +1,9 @@
+{
+    "verifier":
+    {
+        "username":"<email id from which system will send the emails mail@company.com>",
+        "password":"<password of above email id",
+        "from":"<it can be same as above email id>",
+        "fromName":"<Name that you want to be appeared with email id in the mail>" 
+    }
+}

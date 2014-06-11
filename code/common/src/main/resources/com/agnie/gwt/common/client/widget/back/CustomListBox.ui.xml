@@ -1,0 +1,16 @@
+<!--
+  copyright-to-be-replaced
+-->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget' xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.CustomListBoxResources' />
+	<ui:with field='msg' type='com.agnie.gwt.common.client.Messages' />
+	<g:HTMLPanel addStyleNames="{res.css.customListBoxPan}">
+		<g:HTMLPanel ui:field="listTitlePan" addStyleNames='{res.css.customListTitlePan}'>
+			<span ui:field="customListTitle" class='{res.css.customListTitle}'></span>
+			<g:Image ui:field="customListImg" addStyleNames='{res.css.customListImg}'></g:Image>
+		</g:HTMLPanel>
+		<g:FocusPanel ui:field="cellListContainer"></g:FocusPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

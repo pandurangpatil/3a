@@ -1,0 +1,30 @@
+/*******************************************************************************
+* Copyright (c) 2014 Agnie Technologies.
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the GNU Public License v3.0
+* which accompanies this distribution, and is available at
+* http://www.gnu.org/licenses/gpl.html
+* 
+* Contributors:
+*     Agnie Technologies - initial API and implementation
+*******************************************************************************/
+#-------------------------------------------------------------------------------
+# copyright-to-be-replaced
+#-------------------------------------------------------------------------------
+.text-box-pan {
+	background: none repeat scroll 0 0 transparent;
+}
+
+.text-box-pan .text-box {
+	background-color: white;
+    border: 1px solid #CDCDCD;
+    border-radius: 4px 4px 4px 4px;
+    float: none;
+}
+
+.text-box-error{
+	border: 1px solid red !important;
+    box-shadow: 0 1px 3px peru inset !important;
+}
+
+@external text-box-pan, text-box, text-box-error;

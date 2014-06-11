@@ -1,0 +1,36 @@
+<!--
+  copyright-to-be-replaced
+-->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:c='urn:import:com.google.gwt.user.cellview.client'
+	xmlns:e='urn:import:com.google.gwt.editor.ui.client' xmlns:uac='urn:import:com.agnie.gwt.common.client.widget'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+	ui:generateLocales="default">
+	<ui:with field='msg' type='com.agnie.gwt.common.client.Messages' />
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.SelectUnselectResources' />
+	<g:HTMLPanel addStyleNames='{res.css.selUnselPan}'>
+		<div class='{res.css.fltLeft}'>
+			<div ui:field="avlLabel" style="text-align: center;">
+				<ui:text from='{msg.available}'></ui:text>
+			</div>
+			<uac:ListBox ui:field="available" height="150px" width="150px"></uac:ListBox>
+		</div>
+		<div class='{res.css.btnPan}'>
+			<div>
+				<g:Button ui:field="mvrgt" ></g:Button>
+			</div>
+			<div>
+				<g:Button ui:field="mvlft" ></g:Button>
+			</div>
+		</div>
+		
+		<div class='{res.css.fltLeft}'>
+			<div ui:field="selLabel" style="text-align: center;">
+				<ui:text from='{msg.selected}'></ui:text>
+			</div>
+			<uac:ListBox ui:field="selected" height="150px" width="150px"></uac:ListBox>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

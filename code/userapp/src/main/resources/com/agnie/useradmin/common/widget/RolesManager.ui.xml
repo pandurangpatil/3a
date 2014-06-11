@@ -1,0 +1,24 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='res'
+		type='com.agnie.useradmin.common.widget.RolesManagerResources' />
+
+	<ui:with type="com.agnie.useradmin.common.client.Messages"
+		field="msg"></ui:with>
+
+	<ui:style>
+		.btnPan {
+			padding: 5px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel addStyleNames="{res.css.rolesManagerPan}">
+		<g:HTMLPanel ui:field="selUnselPan"></g:HTMLPanel>
+		<g:HTMLPanel ui:field="btnPan" addStyleNames="{style.btnPan}">
+			<g:Button ui:field="updateBtn" text="{msg.update}"
+				addStyleNames="green-button"></g:Button>
+			<g:Button ui:field="cancelBtn" text="{msg.cancel}"
+				addStyleNames="grey-button"></g:Button>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

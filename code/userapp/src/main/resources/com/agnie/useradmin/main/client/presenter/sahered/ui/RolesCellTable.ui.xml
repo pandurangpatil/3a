@@ -1,0 +1,21 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:c='urn:import:com.google.gwt.user.cellview.client'>
+
+	<ui:style>
+		.pager {
+			background-color: #E7F2F5;
+			height: 37px;
+			padding-left: 135px;
+			padding-top: 15px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div style="align:left;height: 378px;">
+			<c:CellTable ui:field='table' width="100%" />
+		</div>
+		<div class="{style.pager}">
+			<c:SimplePager ui:field="pager" location="CENTER"></c:SimplePager>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

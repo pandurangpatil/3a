@@ -1,0 +1,30 @@
+.green-button{
+	height: 47px;
+	display: inline-block;
+	cursor: pointer;
+}
+.green-button-label{
+	line-height: 45px;
+}
+
+@sprite .green-button-body{
+	gwt-image: 'bodyGrnBtn';
+    height: 47px;
+	color: #FFFFFF;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+@sprite .green-button-left{
+	gwt-image: 'leftGrnBtn';
+    height: 47px;
+	width:21px;
+}
+
+@sprite .green-button-right{
+	gwt-image: 'rightGrnBtn';
+    height: 47px;
+    width: 39px;
+}
+
+@external green-button, green-button-label, green-button-body, green-button-left, green-button-right;

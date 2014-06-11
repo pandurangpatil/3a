@@ -1,0 +1,15 @@
+.sel-unsel-pan {
+	padding: 5px;
+}
+
+.sel-unsel-pan .btn-pan {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 50px;
+	float: left;
+}
+
+.flt-left {
+	float: left;
+}
+@external sel-unsel-pan, btn-pan, flt-left;

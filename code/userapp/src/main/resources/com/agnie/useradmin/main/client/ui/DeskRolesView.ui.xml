@@ -1,0 +1,113 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+
+	<ui:with field='msg' type='com.agnie.useradmin.main.client.Messages' />
+	<ui:with type="com.agnie.useradmin.main.client.ui.MainPageResources"
+		field="mainPageRes"></ui:with>
+	<ui:style type="com.agnie.useradmin.main.client.ui.DeskRolesView.MyStyle">
+	.tbl-pan {
+		background-color: white;
+		border: 2px solid #7FC7D8;
+		border-radius: 4px 4px 4px 4px;
+		padding: 5px;
+		float: left;
+		width: 475px;
+		height: 430px;
+	}
+	
+	.tbl-pan thead {
+		border-radius: 6px 6px 6px 6px;
+		border: 1px solid #C8C8C8;
+		height: 35px;
+		background-color: #33342D;
+	}
+	
+	.tbl-pan th {
+		color: white;
+		text-shadow: 1px 1px 0 #33342D;
+		font-weight: normal;
+		border-bottom: medium none;
+	}
+	
+	.userTblPanContainer {
+		height: 441px;
+		margin-top: 10px;
+	}
+	
+	.create-role-child {
+		margin: 0px auto;
+		width: 353px;
+	}
+	
+	.save-btn-container {
+		background-color: #E7F2F5;
+		height: 31px;
+		padding-bottom: 10px;
+		padding-left: 135px;
+		padding-top: 10px;
+	}
+	
+	.permission-title {
+		color: #736973;
+		font-weight: bold;
+		margin-bottom: 5px;
+		margin-top: 5px;
+		padding: 5px;
+		text-decoration: underline;
+	}
+	
+	.rgtMargin {
+		margin-right: 5px !important;
+	}
+	
+	.delAddBtnPan {
+		float: left;
+	}
+	</ui:style>
+	<g:HTMLPanel addStyleNames="useradmin useradmin-roles">
+		<agcw:PageTitle ui:field="pageTitle" pageTitle='{msg.roles}'></agcw:PageTitle>
+
+		<g:HTMLPanel ui:field="userTblBtnPan" addStyleNames="{mainPageRes.css.tblBtnPan}">
+			<div class="clearfix">
+				<g:HTMLPanel addStyleNames="{style.delAddBtnPan}" ui:field="delAddBtnPan">
+				</g:HTMLPanel>
+				<g:HTMLPanel ui:field="levelContainer"
+					addStyleNames="{mainPageRes.css.reqStatusWrapContainer}"></g:HTMLPanel>
+			</div>
+			<div ui:field="userTblPanContainer" class="{style.userTblPanContainer}">
+				<g:HTMLPanel ui:field="rolesTblPan" addStyleNames="{style.tbl-pan}"></g:HTMLPanel>
+				<g:HTMLPanel ui:field="createRole" addStyleNames="{mainPageRes.css.createRole}">
+					<div style="height: 380px;">
+						<div class="{style.create-role-child} fixed-wd-input-container">
+							<agcw:FormFieldContainer ui:field="nameContainer"
+								desc="Name of the role" label='{msg.name}' required="true">
+								<agcw:inputfieldcontainer>
+									<g:TextBox ui:field="name"></g:TextBox>
+								</agcw:inputfieldcontainer>
+							</agcw:FormFieldContainer>
+							<agcw:FormFieldContainer ui:field="descriptionContainer"
+								desc="Small description which describes the role" label='{msg.description}'>
+								<agcw:inputfieldcontainer>
+									<g:TextArea ui:field="description"></g:TextArea>
+								</agcw:inputfieldcontainer>
+							</agcw:FormFieldContainer>
+						</div>
+						<agcw:FormFieldContainer ui:field="permissionsContainer"
+							label='{msg.permissions}' required="true">
+							<agcw:inputfieldcontainer>
+								<g:HTMLPanel ui:field="permCont"
+									addStyleNames="{mainPageRes.css.permContainer}">
+								</g:HTMLPanel>
+							</agcw:inputfieldcontainer>
+						</agcw:FormFieldContainer>
+
+					</div>
+					<div class="{style.save-btn-container}">
+						<g:Button ui:field="save" addStyleNames="green-button"
+							text='{msg.save}'></g:Button>
+					</div>
+				</g:HTMLPanel>
+			</div>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

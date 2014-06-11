@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<!-- Agnie's admin.agnie.co.in apps APPLICATION level permissions Start -->
+	<permission>
+		<name>create-application</name>
+		<code>perm_app_create</code>
+		<authLevel>APPLICATION</authLevel>
+		<description>Allow user to create Application</description>
+	</permission>
+	<permission>
+		<name>create-user</name>
+		<code>perm_user_create</code>
+		<authLevel>APPLICATION</authLevel>
+		<description>Allow user to create other User</description>
+	</permission>
+	<permission>
+		<name>view-user</name>
+		<code>perm_user_view</code>
+		<authLevel>APPLICATION</authLevel>
+		<description>Allow user to view other User details</description>
+	</permission>
+	<permission>
+		<name>delete-user</name>
+		<code>perm_user_delete</code>
+		<authLevel>APPLICATION</authLevel>
+		<description>Allow user to delete other user/s</description>
+	</permission>
+	<permission>
+		<name>edit-user</name>
+		<code>perm_user_edit_general</code>
+		<authLevel>APPLICATION</authLevel>
+		<description>Allow user to edit general details of user</description>
+	</permission>
+	<permission>
+		<name>reset-password</name>
+		<code>perm_user_edit_resetpwd</code>
+		<authLevel>APPLICATION</authLevel>
+		<description>Allow user to reset password of other users</description>
+	</permission>
+	<!-- End of Application level permissions -->
+	<!-- Application level admin permissions -->
+	<permission>
+		<name>delete-application</name>
+		<code>perm_app_delete</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to delete Application</description>
+	</permission>
+	<permission>
+		<name>edit-application-details</name>
+		<code>perm_app_edit_setting_edit_gen</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to edit general application details
+		</description>
+	</permission>
+	<permission>
+		<name>view-application-details</name>
+		<code>perm_app_edit_setting_view</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to delete Application</description>
+	</permission>
+	<permission>
+		<name>create-role</name>
+		<code>perm_app_edit_role_create</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to create roles under given application
+		</description>
+	</permission>
+	<permission>
+		<name>delete-role</name>
+		<code>perm_app_edit_role_delete</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to delete roles under given application
+		</description>
+	</permission>
+	<permission>
+		<name>edit-role</name>
+		<code>perm_app_edit_role_edit</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to edit roles under given application
+		</description>
+	</permission>
+	<permission>
+		<name>view-role</name>
+		<code>perm_app_edit_role_view</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to view roles under given application
+		</description>
+	</permission>
+	<permission>
+		<name>create-permission</name>
+		<code>perm_app_edit_permission_create</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to create permissions under given application
+		</description>
+	</permission>
+	<permission>
+		<name>delete-permission</name>
+		<code>perm_app_edit_permission_delete</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to delete permissions under given application
+		</description>
+	</permission>
+	<permission>
+		<name>edit-permission</name>
+		<code>perm_app_edit_permission_edit</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to edit permissions under given application
+		</description>
+	</permission>
+	<permission>
+		<name>view-permission</name>
+		<code>perm_app_edit_permission_view</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to view permissions under given application
+		</description>
+	</permission>
+	<permission>
+		<name>create-context</name>
+		<code>perm_app_edit_ctxt_create</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to create contexts under given application
+		</description>
+	</permission>
+	<permission>
+		<name>list-contexts</name>
+		<code>perm_app_edit_ctxt_list</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to view contexts under given application
+		</description>
+	</permission>
+	<permission>
+		<name>manage-user-registration</name>
+		<code>perm_app_edit_user_reg</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to manage registration of users under given
+			application
+		</description>
+	</permission>
+	<permission>
+		<name>manage-user-deregistration</name>
+		<code>perm_app_edit_user_dereg</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to manage user deregistration under given
+			application
+		</description>
+	</permission>
+	<permission>
+		<name>app-role-management</name>
+		<code>perm_app_edit_user_rolemgmt</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to manage users application roles under given
+			application
+		</description>
+	</permission>
+	<permission>
+		<name>admin-role-management</name>
+		<code>perm_app_edit_user_admin_rolemgmt</code>
+		<authLevel>ADMIN_APP</authLevel>
+		<description>Allow user to manage user's admin roles under given
+			application
+		</description>
+	</permission>
+	<!-- admin permissions end -->
+	<!-- Context level admin permissions -->
+	<permission>
+		<name>view-context-roles</name>
+		<code>perm_app_edit_ctxt_role_view</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to view context roles
+		</description>
+	</permission>
+	<permission>
+		<name>view-context-admin-roles</name>
+		<code>perm_app_edit_ctxt_admin_role_view</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to view context admin roles
+		</description>
+	</permission>
+	<permission>
+		<name>view-context</name>
+		<code>perm_app_edit_ctxt_edit_setting_view</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to view context under given application
+			context
+		</description>
+	</permission>
+	<permission>
+		<name>edit-context</name>
+		<code>perm_app_edit_ctxt_edit_setting_edit</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to edit context under given application
+			context
+		</description>
+	</permission>
+	<permission>
+		<name>delete-context</name>
+		<code>perm_app_edit_ctxt_delete</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to delete context under given application
+			context
+		</description>
+	</permission>
+	<permission>
+		<name>manage-user-ctx-registration</name>
+		<code>perm_app_edit_ctxt_edit_user_reg</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to manage registration of users under given
+			application context
+		</description>
+	</permission>
+	<permission>
+		<name>manage-user-ctx-deregistration</name>
+		<code>perm_app_edit_ctxt_edit_user_dereg</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to manage user deregistration under given
+			application context
+		</description>
+	</permission>
+	<permission>
+		<name>app-ctx-role-management</name>
+		<code>perm_app_edit_ctxt_edit_user_rolemgmt</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to manage users application roles under given
+			application context
+		</description>
+	</permission>
+	<permission>
+		<name>admin-ctx-role-management</name>
+		<code>perm_app_edit_ctxt_edit_user_admin_rolemgmt</code>
+		<authLevel>ADMIN_CTX</authLevel>
+		<description>Allow user to manage user's admin roles under given
+			application context
+		</description>
+	</permission>
+	<!-- Context level admin permissions ends -->
+</permissions>

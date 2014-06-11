@@ -1,0 +1,11 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:a="urn:import:com.google.gwt.aria.client">
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.CloseBtnResources' />
+	<ui:with field='msg' type='com.agnie.gwt.common.client.Messages' />
+
+	<g:HTMLPanel>
+		<g:Image  ui:field="closeBtn"
+			addStyleNames='{res.css.img}'></g:Image>
+	</g:HTMLPanel>
+</ui:UiBinder>

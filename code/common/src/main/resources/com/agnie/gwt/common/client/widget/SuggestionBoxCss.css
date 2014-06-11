@@ -1,0 +1,25 @@
+.main-pan {
+	width: 300px;
+	margin: 0 auto;
+	height:200px;
+}
+
+@url search search;
+.search {
+	width: 300px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding-left: 20px;
+	background: pink search left no-repeat;
+}
+
+.list {
+	border: 2px solid blue;
+	border-radius: 5px;
+	width: 320px;
+	margin-top: 5px;
+	background-color: pink;
+}
+@external main-pan, search, list;

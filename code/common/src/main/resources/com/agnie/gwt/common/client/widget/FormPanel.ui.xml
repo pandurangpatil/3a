@@ -1,0 +1,17 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		
+	</ui:style>
+
+	<ui:with type="com.agnie.gwt.common.client.widget.FormPanelResources"
+		field="formPanRes"></ui:with>
+
+	<g:HTMLPanel>
+		<div class="{formPanRes.css.formPanelInnerWrap}">
+			<g:Label ui:field="label" addStyleNames="{formPanRes.css.formLabel}"></g:Label>
+			<g:HTMLPanel ui:field="formContainer" addStyleNames="{formPanRes.css.formContainer}"></g:HTMLPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

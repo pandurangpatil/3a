@@ -1,0 +1,17 @@
+{
+    "byApplication": {
+        "base": "select upr from UserApplicationRegistration upr",
+        "where": "upr.user.status=:userstatus",        
+        "filter": {
+            "search": "( upr.user.firstName LIKE :search OR upr.user.lastName LIKE :search OR upr.user.emailId LIKE :search OR upr.user.userName LIKE :search )",
+            "status": "upr.status = :status",
+            "domain": "upr.app.domain = :domain"
+        },
+        "mapping" : {
+        	"user.firstName": "upr.user.firstName",
+        	"user.lastName": "upr.user.lastName",
+        	"user.userName": "upr.user.userName",
+        	"status": "upr.status" 
+        }
+    }
+}

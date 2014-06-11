@@ -1,0 +1,15 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:with field='rolePx'
+		type="com.agnie.useradmin.persistance.shared.proxy.RolePx" />
+	<g:HTMLPanel>
+			<div>
+				Name:
+				<ui:text from='{rolePx.getName}' />
+			</div>
+			<div>
+				Description:
+				<ui:text from='{rolePx.getDescription}' />
+			</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

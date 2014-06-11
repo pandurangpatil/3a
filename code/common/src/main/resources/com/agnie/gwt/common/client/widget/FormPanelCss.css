@@ -1,0 +1,25 @@
+.form-panel {
+	padding: 30px;
+}
+
+.form-panel-inner-wrap {
+}
+
+.form-label {
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-container .form-field-label {
+    width: 145px;
+}
+.form-container input[type="text"], input[type="password"], textarea {
+    width: 239px;
+}
+
+@external form-panel, form-panel-inner-wrap, form-label, form-container, form-field-label;

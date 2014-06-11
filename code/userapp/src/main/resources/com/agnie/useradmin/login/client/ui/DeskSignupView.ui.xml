@@ -1,0 +1,83 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'
+	xmlns:captcha="urn:import:com.sfeir.captcha.client.ui">
+	<ui:with field='msg' type='com.agnie.useradmin.login.client.Messages' />
+
+	<ui:with type="com.agnie.useradmin.login.client.ui.LoginPageResources"
+		field="loginPageRes"></ui:with>
+	<ui:style>
+	.signup-action-panel {
+		clear: both;
+		margin: 0 0 0 165px;
+		padding-top: 25px;
+	}
+	
+	.captchaPanel {
+		margin: 0 0 0 165px;
+		width: 320px;
+		margin-top: 45px;
+	}
+	</ui:style>
+
+	<g:HTMLPanel addStyleNames='signup-content'>
+		<agcw:FormPanel ui:field="formPanel" label='{msg.signupForm}'>
+			<agcw:formcontainer>
+				<g:HTMLPanel ui:field="formCont">
+					<agcw:FormFieldContainer ui:field="usernametbContainer"
+						desc="Unique user identifier" required="true" label='{msg.username}'>
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="usernametb"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer ui:field="paswdtbContainer"
+						required="true" label='{msg.password}'>
+						<agcw:inputfieldcontainer>
+							<g:PasswordTextBox ui:field="paswdtb"></g:PasswordTextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer ui:field="confpaswdtbContainer"
+						desc="Confirm password should match with password" required="true"
+						label='{msg.confpassword}'>
+						<agcw:inputfieldcontainer>
+							<g:PasswordTextBox ui:field="confpaswdtb"></g:PasswordTextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer ui:field="emailtbContainer"
+						desc="email id to communicate with user directly." required="true"
+						label='{msg.email}'>
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="emailtb"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer ui:field="titletbContainer"
+						desc="Title you would like to prefix with your name" label='{msg.title}'>
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="titletb"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer ui:field="fnametbContainer"
+						label='{msg.firstName}'>
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="fnametb"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+					<agcw:FormFieldContainer ui:field="lnametbContainer"
+						label='{msg.lastName}'>
+						<agcw:inputfieldcontainer>
+							<g:TextBox ui:field="lnametb"></g:TextBox>
+						</agcw:inputfieldcontainer>
+					</agcw:FormFieldContainer>
+
+					<g:HTMLPanel ui:field="captchaContainer" addStyleNames="{style.captchaPanel}">
+					</g:HTMLPanel>
+					<div class='{style.signup-action-panel}'>
+						<g:Button ui:field="submitBtn" addStyleNames="blue-button"
+							text='{msg.signupForm}'></g:Button>
+						<g:Button ui:field="cancelBtn" addStyleNames="grey-button"
+							text='{msg.cancel}'></g:Button>
+					</div>
+				</g:HTMLPanel>
+			</agcw:formcontainer>
+		</agcw:FormPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

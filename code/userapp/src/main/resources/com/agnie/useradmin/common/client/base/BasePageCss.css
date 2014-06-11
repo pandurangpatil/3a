@@ -1,0 +1,146 @@
+.useradmin {
+	clear: both;
+	margin-top: 10px;
+}
+
+.landing-scope .message-pan {
+	margin-top: 20px;
+}
+
+.useradmin-scope .help-bread-crumb-pan,.landing-scope .help-bread-crumb-pan
+	{
+	height: 30px;
+	margin-top: 20px;
+}
+
+@sprite .useradmin-scope .help-image,.landing-scope .help-image {
+	gwt-image: 'helpImage';
+	background-position: center center;
+	background-repeat: no-repeat;
+	float: right;
+	cursor: pointer;
+}
+/*--------------------------New headercss from useradmin.main starts here----------------------------*/
+.ua-header {
+	z-index: 1;
+	position: relative;
+}
+
+.header-useradmin {
+	/*background: url("images/login-header.png") repeat-x scroll left top
+		transparent;*/
+	width: 100%;
+	position: fixed;
+	z-index: 5;
+	box-shadow: 0px 1px 17px black;
+	height: 65px;
+}
+
+.headerw {
+	width: 980px;
+	margin: 0 auto;
+}
+
+@sprite .header-img {
+	gwt-image: 'logo';
+	margin: 5px 0;
+}
+
+.header-useradmin .header-right-pan {
+	float: right;
+	margin-top: 5px;
+	font-size: 15px;
+}
+
+.header-useradmin .header-right-pan .language {
+	clear: both;
+	width: 162px;
+	float: right;
+	height: 25px;
+}
+
+
+.header-useradmin .acc-pan-useradmin .acc-title-pan {
+    padding: 5px 0 5px 5px;
+}
+
+.header-useradmin .header-right-pan .language .custom-list-box-pan {
+	float: right;
+	position: relative;
+}
+
+.header-useradmin .header-right-pan .language .styled-select {
+	float: right;
+}
+
+.header-useradmin .header-right-pan .language .styled-select select {
+	font-family: "Avant Garde", "Century Gothic", "Avant Garde Gothic",
+		"URW Gothic L", helvetica, sans-serif;
+	width: 106px;
+}
+
+.header-useradmin .header-right-pan .welcome .acc-title-pan span {
+	float: left;
+	padding: 3px;
+}
+
+.header-useradmin .header-right-pan  .welcome {
+	clear: both;
+}
+
+/*--------------------------New headercss from useradmin.main ends here------------------------------*/
+/*--------------------------New footercss from useradmin.main starts here----------------------------*/
+.footer-useradmin {
+	width: 100%;
+	height: 200px;
+	padding-top: 1px;
+	border-top: 10px solid rgb(2, 117, 168);
+}
+
+.footerw {
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+@sprite .design .footer-logo{
+	gwt-image: 'poweredBy';
+	margin: 0 auto;
+}
+
+@sprite .comodo{
+	gwt-image: 'comodo';
+	display: block;
+}
+
+.copyright {
+	color: white;
+	font-size: 13px;
+}
+
+.design {
+	float: right !important;
+	width: 160px !important;
+}
+
+.design-by {
+	color: white;
+	font-size: 13px;
+}
+
+.design-by-sign {
+	color: #4D9FC7;
+	cursor: pointer;
+	font-size: 13px;
+	margin-left: 10px;
+}
+
+.design a:hover {
+	color: #E2E2E2 !important;
+	background-color: #999999 !important;
+}
+
+/*------------------------New footer css from useradmin.main ends here-------------------------------*/
+
+
+@external message-pan, useradmin, useradmin-scope, landing-scope, help-bread-crumb-pan, help-image, ua-header, header-useradmin, headerw, header-img, header-right-pan, language, acc-pan-useradmin, acc-title-pan, custom-list-box-pan, styled-select, acc-title-pan, welcome, footer-useradmin, footerw, copyright, design,design-by, design-by-sign, footer-logo, comodo;

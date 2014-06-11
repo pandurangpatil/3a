@@ -1,0 +1,11 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget' xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:with field='res'
+		type='com.agnie.gwt.common.client.widget.CustomMenuPanResources' />
+	<ui:with field='msg' type='com.agnie.gwt.common.client.Messages' />
+	<ui:style>
+	</ui:style>
+	<g:HTMLPanel >
+			<span ui:field="title"></span>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='agniecommon'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name="com.agnie.common.gwt.serverclient.commonserverclient" />
+	<source path='client' />
+	<public path="public" />
+</module>

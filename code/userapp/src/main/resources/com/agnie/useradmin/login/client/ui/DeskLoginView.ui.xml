@@ -1,0 +1,211 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:agcw='urn:import:com.agnie.gwt.common.client.widget'>
+	<ui:style>
+		.remember-fgt-pwd {
+			font-size: 13px;
+			text-shadow: 0px 1px white;
+		}
+		
+		.login-main {
+			margin-top: 50px;
+		}
+		
+		.user-error-message {
+			height: 30px;
+			width: 360px;
+			margin: 0 auto 5px;
+			float: right;
+			margin-bottom: 30px;
+		}
+		
+		.signup-pan {
+			width: 364px;
+			height: 222px;
+			margin: 0 auto;
+		}
+		
+		.signup-pan input[type="text"],.signup-pan input[type="password"] {
+			padding: 7px;
+		}
+		
+		.signup-head {
+			font-size: 19px;
+			padding: 15px 0;
+			text-align: center;
+		}
+		
+		.username-pass a:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		
+		/*.username-pass a {
+							line-height: 16px;
+							cursor: pointer;
+							float: left;
+							margin-left: 10px;
+						}*/
+		.username-pass {
+			margin: 0 30px;
+		}
+		
+		.username-pass .username input[type="text"] {
+			width: 270px;
+		}
+		
+		.username-pass .text-box:focus {
+			border: 1px solid #029DDF;
+			box-shadow: 0 1px 3px #5CB3FF inset;
+		}
+		
+		.username-pass input,button,select,textarea {
+			line-height: 16px;
+		}
+		
+		.username-pass .password input[type="text"],.username-pass .password input[type="password"]
+			{
+			width: 200px;
+		}
+		
+		.remember {
+			line-height: 16px;
+			float: left;
+			color: #999999;
+			font-size: 13px;
+		}
+		
+		.signin-button {
+			line-height: 15px;
+			background-color: #019DDD;
+			border: 1px solid #3079ED;
+			padding: 6px 8px;
+			text-align: center;
+			box-shadow: 0 1px 0 0 white;
+			text-shadow: 0px -1px #3386D1;
+			background: rgb(39, 192, 254); /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background:
+				url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3YzBmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iIzFmYWZlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzE1YThkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTk5ZDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(31, 175, 228, 1) 33%, rgba(21, 168, 222, 1) 66%,
+				rgba(9, 153, 216, 1) 100% ); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(39,
+				192, 254, 1) ), color-stop(33%, rgba(31, 175, 228, 1) ),
+				color-stop(66%, rgba(21, 168, 222, 1) ),
+				color-stop(100%, rgba(9, 153, 216, 1) ) ); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(31, 175, 228, 1) 33%, rgba(21, 168, 222, 1) 66%,
+				rgba(9, 153, 216, 1) 100% ); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(31, 175, 228, 1) 33%, rgba(21, 168, 222, 1) 66%,
+				rgba(9, 153, 216, 1) 100% ); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(31, 175, 228, 1) 33%, rgba(21, 168, 222, 1) 66%,
+				rgba(9, 153, 216, 1) 100% ); /* IE10+ */
+			background: linear-gradient(to bottom, rgba(39, 192, 254, 1) 0%,
+				rgba(31, 175, 228, 1) 33%, rgba(21, 168, 222, 1) 66%,
+				rgba(9, 153, 216, 1) 100% ); /* W3C */
+			filter: progid :     DXImageTransform.Microsoft.gradient ( startColorstr = '#27c0fe', endColorstr =   '#0999d8', GradientType =   0 );
+			/* IE6-8 */
+		}
+		
+		.signin-button:hover {
+			background: rgb(39, 192, 254); /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background:
+				url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3YzBmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iIzA0N2ZjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwODJkMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwODdkYzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(4, 127, 204, 1) 33%, rgba(0, 130, 208, 1) 66%,
+				rgba(8, 125, 198, 1) 100% ); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(39,
+				192, 254, 1) ), color-stop(33%, rgba(4, 127, 204, 1) ),
+				color-stop(66%, rgba(0, 130, 208, 1) ),
+				color-stop(100%, rgba(8, 125, 198, 1) ) ); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(4, 127, 204, 1) 33%, rgba(0, 130, 208, 1) 66%,
+				rgba(8, 125, 198, 1) 100% ); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(4, 127, 204, 1) 33%, rgba(0, 130, 208, 1) 66%,
+				rgba(8, 125, 198, 1) 100% ); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(39, 192, 254, 1) 0%,
+				rgba(4, 127, 204, 1) 33%, rgba(0, 130, 208, 1) 66%,
+				rgba(8, 125, 198, 1) 100% ); /* IE10+ */
+			background: linear-gradient(to bottom, rgba(39, 192, 254, 1) 0%,
+				rgba(4, 127, 204, 1) 33%, rgba(0, 130, 208, 1) 66%,
+				rgba(8, 125, 198, 1) 100% ); /* W3C */
+			filter: progid :DXImageTransform.Microsoft.gradient (   startColorstr='#27c0fe', endColorstr =   '#087dc6', GradientType =   0 );
+			/* IE6-8 */
+		}
+		
+		.signin-checkbox { /*float: left;*/
+			
+		}
+		
+		.newSignUp {
+			margin: 20px 30px;
+			padding: 0;
+			text-align: center;
+		}
+		
+		.newSignUp a:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		
+		.newSignUp a {
+			text-decoration: none;
+			font-size: 16px;
+		}
+		
+		.app-frame{
+		    border: 0 none;
+		    border-radius: 4px 4px 4px 4px;
+		    box-shadow: 0 1px 4px gray;
+		    height: 400px;
+		    overflow: hidden;
+		    width: 500px;
+		}
+	</ui:style>
+
+	<ui:with field='msg' type='com.agnie.useradmin.login.client.Messages' />
+	<ui:with type="com.agnie.useradmin.login.client.ui.LoginPageResources"
+		field="loginPageRes"></ui:with>
+
+	<g:HTMLPanel addStyleNames="{style.login-main}">
+		<div>
+			<div class="{style.signup-pan}">
+				<div class="{style.signup-head}" ui:field="loginmsg" text='{msg.signupHere}'></div>
+				<div class="{style.username-pass}">
+					<table style="padding: 5px;">
+						<tr>
+							<td colspan="2">
+								<agcw:LabelTextBox ui:field="userNameTB"
+									label='{msg.username}' addStyleNames="{style.username}"></agcw:LabelTextBox>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<agcw:LabelPasswordBox ui:field="passwordTB"
+									label='{msg.password}' addStyleNames="{style.password}"></agcw:LabelPasswordBox>
+							</td>
+							<td>
+								<g:Button ui:field="loginBtn" addStyleNames="{style.signin-button}"
+									text='{msg.signin}'></g:Button>
+							</td>
+						</tr>
+						<tr class="{style.remember-fgt-pwd}">
+							<td colspan="2">
+								<g:CheckBox ui:field="checkToRemember" addStyleNames="{style.signin-checkbox}"
+									text="{msg.remeber}"></g:CheckBox>
+								<g:Anchor ui:field="forgetPwd" text='{msg.fgtpwd}'></g:Anchor>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="{style.newSignUp}">
+					<g:Anchor ui:field="signupBtn" text='{msg.signup}'></g:Anchor>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

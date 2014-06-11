@@ -1,0 +1,275 @@
+/*******************************************************************************
+* Copyright (c) 2014 Agnie Technologies.
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the GNU Public License v3.0
+* which accompanies this distribution, and is available at
+* http://www.gnu.org/licenses/gpl.html
+* 
+* Contributors:
+*     Agnie Technologies - initial API and implementation
+*******************************************************************************/
+#-------------------------------------------------------------------------------
+# copyright-to-be-replaced
+#-------------------------------------------------------------------------------
+/*
+	This css is sample stylesheets for Main menu widget. You need to add these styles inside applications main css file.
+*/
+.tabBox .tabs {
+	margin: 0;
+	padding: 0 10px;
+	overflow: hidden;
+	margin-bottom: -1px;
+	height: 2.25em;
+}
+
+.tabBox .tabs div {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: .25em .25em 0;
+	height: 2em;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	border-bottom: 1px solid #FFF;
+}
+
+.tabBox .tabs div.inactive {
+}
+
+.tabBox .tabs div.active {
+	z-index: 3;
+}
+
+.tabBox .tabs a {
+	float: left;
+	height: 2em;
+	line-height: 2em;
+	-webkit-border-radius: 8px 8px 0 0;
+	-moz-border-radius: 8px 8px 0 0;
+	border-radius: 8px 8px 0 0;
+	background: #EEE;
+	border: 1px solid #CCC;
+	border-bottom: 0;
+	padding: 0 10px;
+	color: #000;
+	text-decoration: none;
+	behavior: url(PIE.htc);
+}
+
+.tabBox .tabs .active a {
+	background: #FFF;
+	-webkit-box-shadow: #CCC 0 0 .25em;
+	-moz-box-shadow: #CCC 0 0 .25em;
+	box-shadow: #CCC 0 0 .25em;
+}
+
+.tabBox .tabs a:hover {
+	background: -webkit-gradient(linear, 0 0, 0 70%, from(#EEF), to(#FFF) );
+	background: -webkit-linear-gradient(#EEF, #FFF 70%);
+	background: -moz-linear-gradient(#EEF, #FFF 70%);
+	background: -ms-linear-gradient(#EEF, #FFF 70%);
+	background: -o-linear-gradient(#EEF, #FFF 70%);
+	background: linear-gradient(#EEF, #FFF 70%);
+	-pie-background: linear-gradient(#EEF, #FFF 70%);
+}
+/*****************from hs*****************	All Menu related Css starts here **********************************/
+.menu {
+	background: transparent;
+	width: 100%;
+	position: absolute;
+	top: 83px;/* changed value from 3px to 73px for hs tabar location*/
+}
+
+.tabs a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	Widget related css Starts here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.main-menu {
+	margin-left: auto;
+	margin-right: auto;
+	width: 950px;
+	position: relative;
+}
+
+.main-menu .tabs {
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	width: 740px;
+}
+
+.main-menu .tabs div {
+	float: left;
+	font-weight: bold;
+	height: 45px;
+	list-style-type: none;
+	margin-right: 2px;
+}
+
+.main-menu .tabs div.active {
+	margin-right: 3px;
+}
+
+.main-menu .tabs a {
+	border-radius: 4px 4px 0 0;
+	color: #081F2D;
+	float: left;
+}
+
+.main-menu .tabs .inactive a {
+	background: none repeat scroll 0 0 #189DA1;
+	border-right: 1px solid #333333;
+	font-size: 14px;
+	height: 11px;
+	line-height: 14px;
+	margin-top: 19px;
+	padding: 6px 10px 9px;
+	text-shadow: 1px 1px 1px #53BBC1;
+	text-decoration: none;
+}
+
+.main-menu .tabs .active a {
+	background: none repeat scroll 0 0 #CACACA;
+	color: #081F2D;
+	font-size: 17px;
+	line-height: 18px;
+	padding: 12px 15px 15px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+	text-decoration: none;
+}
+
+.main-menu .tabs a:hover {
+	text-shadow: none;
+	text-decoration: none;
+}
+
+.main-menu .tabs .inactive a:hover {
+	background: none repeat scroll 0 0 #74CBC8;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+
+/* -------------------------------------from hs------------------------------------*/
+.sec-sub-menu-panel {
+	background: none repeat scroll 0 0 #DBE9F0;
+	border-top: 1px solid #FFFFFF;
+	box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.1) inset;
+	height: 45px;
+}
+
+.sec-sub-menu {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.sec-sub-menu .tabs {
+	list-style-type: none;
+	margin: 2px 0 0;
+	padding: 0;
+}
+
+.sec-sub-menu .tabs div {
+	float: left;
+    margin: 0 30px 0 0;
+}
+
+.sec-sub-menu .tabs div.active {
+	
+}
+
+.sec-sub-menu .tabs a {
+	color: #444444;
+	font-size: 14px;
+	line-height: 14px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+.sec-sub-menu .tabs .inactive a {
+	text-decoration: none;
+}
+
+.sec-sub-menu .tabs .active a {
+	background-color: #444444;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 0 2px 2px #333333 inset;
+	color: #EEEEEE;
+	padding: 5px 15px;
+	position: relative;
+	text-shadow: 1px 1px 1px #222222;
+	text-decoration: none;
+}
+
+.sec-sub-menu .tabs a:hover {
+	text-decoration: none;
+}
+/* -------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------*/
+.thir-ver-sub-menu-panel {
+	background: url("images/block5_left_wrap.png") repeat-y scroll left top
+		transparent;
+	width: 236px;
+	padding-top: 80px;
+}
+
+.thir-ver-sub-menu {
+	background: url("images/block5_left_bg.jpg") no-repeat scroll left
+		bottom transparent;
+	padding: 10px 0 40px;
+}
+
+.thir-ver-sub-menu .tabs {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+
+.thir-ver-sub-menu .tabs div {
+	padding: 0 0 5px;
+}
+
+.thir-ver-sub-menu .tabs div.active {
+	
+}
+
+.thir-ver-sub-menu .tabs a {
+	color: #0079B6;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	height: 39px;
+	line-height: 39px;
+	padding: 0 30px 0 0;
+	text-align: right;
+	text-decoration: none;
+}
+
+.thir-ver-sub-menu .tabs .inactive a {
+	text-decoration: none;
+}
+
+.thir-ver-sub-menu .tabs .active a {
+	background: url("images/block5_left_active.png") no-repeat scroll left
+		top transparent !important;
+	color: white !important;
+	text-decoration: none !important;
+}
+
+.thir-ver-sub-menu .tabs a:hover {
+	background: url("images/block5_left_newhover.png") no-repeat scroll left
+		top transparent;
+	color: #0079B6;
+	text-decoration: none;
+}
+/* ----------------------------from hs---------------------------------------------*/
+/*##################################	All Menu related Css Ends here ##################################*/
+
+@external tabBox, tabs, active, inactive, menu, main-menu, sec-sub-menu-panel, sec-sub-menu,  thir-ver-sub-menu-panel, thir-ver-sub-menu;
+
+

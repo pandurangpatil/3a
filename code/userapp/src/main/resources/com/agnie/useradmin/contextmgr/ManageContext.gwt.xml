@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='ManageContext'>
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.agnie.gwt.common.AgnieCommon" />
+	<inherits name="com.agnie.useradmin.persistance.usermgmt" />
+	<inherits name="com.agnie.useradmin.common.Common" />
+	<inherits name="com.agnie.common.util.util" />
+
+	<extend-property name="locale" values="en" />
+	<extend-property name="locale" values="hi" />
+	<extend-property name="locale" values="mr" />
+	<source path="client" />
+	<source path='shared' />
+	<entry-point class="com.agnie.useradmin.contextmgr.client.ContextManager" />
+	<set-configuration-property name="CssResource.style"
+		value="pretty" />
+
+	<replace-with
+		class="com.agnie.useradmin.contextmgr.client.mvp.BrowserRootPanelFactory">
+		<when-type-is
+			class="com.agnie.useradmin.contextmgr.client.mvp.RootPanelFactory" />
+	</replace-with>
+	<replace-with class="com.agnie.useradmin.contextmgr.client.mvp.DesktopFactory">
+		<when-type-is class="com.agnie.useradmin.contextmgr.client.mvp.PlatformFactory" />
+		<when-property-is name="formfactor" value="desktop" />
+	</replace-with>
+
+	<replace-with class="com.agnie.useradmin.contextmgr.client.mvp.MobileFactory">
+		<when-type-is class="com.agnie.useradmin.contextmgr.client.mvp.PlatformFactory" />
+		<when-property-is name="formfactor" value="mobile" />
+	</replace-with>
+
+	<replace-with class="com.agnie.useradmin.contextmgr.client.mvp.TabletFactory">
+		<when-type-is class="com.agnie.useradmin.contextmgr.client.mvp.PlatformFactory" />
+		<when-property-is name="formfactor" value="tablet" />
+	</replace-with>
+</module>

@@ -1,0 +1,25 @@
+/*----------css moved from login css VerifyViewImpl starts here--------------*/
+.fgt-content {
+	margin: 0 auto;
+	width: 560px;
+	margin-top: 30px;
+}
+
+.fgt-title {
+	background: none repeat scroll 0 0 #D8D8D8;
+	border-radius: 6px 6px 6px 6px;
+	margin: 15px 0;
+	padding: 20px 0 20px 102px;
+}
+/*----------css moved from login css SignupViewImpl starts here--------------*/
+
+.signup-content .input-field-container{
+	width: 252px;
+}
+/*------css moved from login css FPChangePasswordViewImpl--------*/
+
+.fgt-action-panel {
+	margin: 10px 0 10px 145px;
+}
+
+@external signup-content, input-field-container;
