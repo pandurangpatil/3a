@@ -2,8 +2,8 @@
 	
 }	
 
-@sprite .close-widget .img{
-	gwt-image: 'crossImg';
+.close-widget .img{
+	gwt-sprite: 'crossImg';
 	cursor: pointer;
 }
 

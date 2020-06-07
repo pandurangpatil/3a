@@ -7,22 +7,22 @@
 	line-height: 45px;
 }
 
-@sprite .green-button-body{
-	gwt-image: 'bodyGrnBtn';
+.green-button-body{
+	gwt-sprite: 'bodyGrnBtn';
     height: 47px;
 	color: #FFFFFF;
     padding-left: 9px;
     padding-right: 9px;
 }
 
-@sprite .green-button-left{
-	gwt-image: 'leftGrnBtn';
+.green-button-left{
+	gwt-sprite: 'leftGrnBtn';
     height: 47px;
 	width:21px;
 }
 
-@sprite .green-button-right{
-	gwt-image: 'rightGrnBtn';
+.green-button-right{
+	gwt-sprite: 'rightGrnBtn';
     height: 47px;
     width: 39px;
 }

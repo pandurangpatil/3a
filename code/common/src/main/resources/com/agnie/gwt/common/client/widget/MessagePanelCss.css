@@ -2,20 +2,20 @@
 	
 }
 
-@sprite .message-pan .error {
-	gwt-image: 'error';
+.message-pan .error {
+	gwt-sprite: 'error';
 }
 
-@sprite .message-pan .info {
-	gwt-image: 'info';
+.message-pan .info {
+	gwt-sprite: 'info';
 }
 
-@sprite .close-btn {
-	gwt-image: 'closeBtn';
+.close-btn {
+	gwt-sprite: 'closeBtn';
 }
 
-@sprite .message-pan .warning {
-	gwt-image: 'warning';
+.message-pan .warning {
+	gwt-sprite: 'warning';
 }
 
 .message-pan .anchor {

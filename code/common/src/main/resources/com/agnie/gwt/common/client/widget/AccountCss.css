@@ -3,16 +3,16 @@
     padding: 0;
 }
 
-@sprite .acc-trianlge {
-	gwt-image: 'accTriangle';
+.acc-trianlge {
+	gwt-sprite: 'accTriangle';
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-color:transparent;
 	width: inherit;
 }
 
-@sprite .acc-pan .img{
-	gwt-image: 'arrowDarkImg';
+.acc-pan .img{
+	gwt-sprite: 'arrowDarkImg';
 	cursor: pointer;
 	float: right;
 	margin-left: 10px;

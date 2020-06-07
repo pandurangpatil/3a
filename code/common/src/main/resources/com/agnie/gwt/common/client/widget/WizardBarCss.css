@@ -26,8 +26,8 @@
 	padding-top:5px;
 }
 
-@sprite .wizard div {
-	gwt-image: 'navButton';
+.wizard div {
+	gwt-sprite: 'navButton';
 	background-position: right top;
 	background-color:#9A9A9A;
 	background-repeat: no-repeat;
@@ -55,32 +55,32 @@
 	color: white;
 }
 
-@sprite .wizard div.done  {
-	gwt-image: 'navDoneButton';
+.wizard div.done  {
+	gwt-sprite: 'navDoneButton';
 	background-color: #01A0E2;
 	background-position: right top;
 	width:196px;
 	height:23px;
 }
 
-@sprite .wizard div.last-done {
-	gwt-image: 'navLastDoneButton';
+.wizard div.last-done {
+	gwt-sprite: 'navLastDoneButton';
 	background-color: #01A0E2;
 	background-position: right top;
 	width:196px;
 	height:23px;
 }
 
-@sprite .wizard div.active {
-	gwt-image: 'navCurrentButton';
+.wizard div.active {
+	gwt-sprite: 'navCurrentButton';
 	background-color: #65C000 !important;
 	background-position: right top;
 	width:196px;
 	height:23px;
 }
 
-@sprite .wizard div.last-element  {
-	gwt-image: 'lastButton';
+.wizard div.last-element  {
+	gwt-sprite: 'lastButton';
 	background-position: right top;
 	background-color:#9A9A9A;
 	float: none;
@@ -90,8 +90,8 @@
 	height:23px;	
 }
 
-@sprite .wizard div.last-active-element  {
-	gwt-image: 'lastButton';
+.wizard div.last-active-element  {
+	gwt-sprite: 'lastButton';
 	background-position: right top;
 	background-color:#9A9A9A;
 	float: none;

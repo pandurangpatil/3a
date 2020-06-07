@@ -16,8 +16,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666e71', endColorstr='#494d50',GradientType=0 ); /* IE6-8 */
 }
 
-@sprite .bread-crumb .node {
-	gwt-image:'breadCrumbSep';
+.bread-crumb .node {
+	gwt-sprite:'breadCrumbSep';
 	background-position: right center;
 	background-repeat: no-repeat;
 	float: left;

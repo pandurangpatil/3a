@@ -1,14 +1,14 @@
-@sprite .dec-panel .close-btn {
-	gwt-image: 'closeBtn';
+.dec-panel .close-btn {
+	gwt-sprite: 'closeBtn';
 	cursor:pointer;
 }
 
-@sprite .dec-panel .min-btn {
-	gwt-image: 'minBtn';
+.dec-panel .min-btn {
+	gwt-sprite: 'minBtn';
 }
 
-@sprite .dec-panel .max-btn {
-	gwt-image: 'maxBtn';
+.dec-panel .max-btn {
+	gwt-sprite: 'maxBtn';
 }
 
 .dec-panel {

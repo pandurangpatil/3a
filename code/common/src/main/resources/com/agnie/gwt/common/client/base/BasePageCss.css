@@ -18,7 +18,7 @@ body {
 	font-family: "Avant Garde", "Century Gothic", "Avant Garde Gothic",
 		"URW Gothic L", helvetica, sans-serif;
 	font-size: 15px;
-	height:100%;'
+	height:100%;
 }
 
 .content-body {
@@ -213,13 +213,6 @@ input,textarea {
 		linear-gradient(to bottom, rgba(136, 196, 70, 1) 21%,
 		rgba(125, 192, 50, 1) 41%, rgba(111, 192, 26, 1) 57%,
 		rgba(84, 173, 0, 1) 97% ); /* W3C */
-	filter: progid :                   DXImageTransform.Microsoft.gradient (
-		startColorstr =         
-		         '#88c446', endColorstr =                   '#54ad00',
-		GradientType =    
-		        
-		     0 );
-	/* IE6-8 */
 }
 
 .grey-button {
@@ -248,11 +241,6 @@ input,textarea {
 	background: linear-gradient(to bottom, rgba(197, 197, 197, 1) 12%,
 		rgba(184, 184, 184, 1) 33%, rgba(166, 166, 166, 1) 56%,
 		rgba(155, 155, 155, 1) 97% ); /* W3C */
-	filter: progid :                     DXImageTransform.Microsoft.gradient
-		( startColorstr =          
-		          '#c5c5c5', endColorstr =                     '#9b9b9b',
-		GradientType =   0 );
-	/* IE6-8 */
 }
 
 .blue-button {
@@ -282,11 +270,6 @@ input,textarea {
 	background: linear-gradient(to bottom, rgba(41, 173, 235, 1) 21%,
 		rgba(35, 168, 233, 1) 41%, rgba(14, 159, 221, 1) 57%,
 		rgba(0, 149, 209, 1) 97% ); /* W3C */
-	filter: progid :               DXImageTransform.Microsoft.gradient (
-		startColorstr =       
-		       '#29adeb', endColorstr =               '#0095d1', GradientType
-		=   0 );
-	/* IE6-8 */
 }
 
 .red-button {
@@ -316,11 +299,6 @@ input,textarea {
 	background: linear-gradient(to bottom, rgba(249, 64, 34, 1) 8%,
 		rgba(216, 59, 31, 1) 44%, rgba(193, 47, 28, 1) 66%,
 		rgba(173, 41, 28, 1) 99% ); /* W3C */
-	filter: progid :             DXImageTransform.Microsoft.gradient (  
-		startColorstr =      
-		      '#f94022', endColorstr =             '#ad291c', GradientType = 0
-		);
-	/* IE6-8 */
 }
 
 .toggle-button {
@@ -354,10 +332,6 @@ input,textarea {
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 5%,
 		rgba(243, 243, 243, 1) 41%, rgba(230, 230, 230, 1) 61%,
 		rgba(221, 221, 221, 1) 90% ); /* W3C */
-	filter: progid :   DXImageTransform.Microsoft.gradient (    
-		startColorstr = 
-		 '#ffffff', endColorstr =   '#dddddd', GradientType =   0 );
-	/* IE6-8 */
 }
 /*--------------------------------------Button related css ends here----------------------------------*/
 

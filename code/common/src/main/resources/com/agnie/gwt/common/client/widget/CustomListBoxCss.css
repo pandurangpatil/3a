@@ -31,8 +31,8 @@
 	float: left;
 }
 
-@sprite .custom-list-box-pan .custom-list-img-up {
-	gwt-image: 'arrowDarkUpImg';
+ .custom-list-box-pan .custom-list-img-up {
+	gwt-sprite: 'arrowDarkUpImg';
 	cursor: pointer;
 	float: right;
 	margin-left: 10px;
@@ -41,8 +41,8 @@
 	width: 9px;
 }
 
-@sprite .custom-list-box-pan .custom-list-img {
-	gwt-image: 'arrowDarkImg';
+ .custom-list-box-pan .custom-list-img {
+	gwt-sprite: 'arrowDarkImg';
 	cursor: pointer;
 	float: right;
 	margin-left: 10px;

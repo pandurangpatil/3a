@@ -20,20 +20,20 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
 
-@sprite .left-error-pan .error-img {
-	gwt-image: 'error';
+.left-error-pan .error-img {
+	gwt-sprite: 'error';
 	cursor: pointer;
 	float:right;
 }
 
-@sprite .left-error-pan .close {
-	gwt-image: 'closeBtn';
+.left-error-pan .close {
+	gwt-sprite: 'closeBtn';
 	cursor: pointer;
 	float:right;
 }
 
-@sprite .left-error-pan .left-error-pan-trianlge {
-	gwt-image: 'textBoxTriangle';
+.left-error-pan .left-error-pan-trianlge {
+	gwt-sprite: 'textBoxTriangle';
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-color:transparent;

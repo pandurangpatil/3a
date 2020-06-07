@@ -9,12 +9,12 @@
 	<name>User admin parent module</name>
 	<properties>
 		<!-- Convenience property to set the GWT version -->
-		<gwtVersion>2.6.1</gwtVersion>
-		<gwtpluginVersion>2.6.1</gwtpluginVersion>
-		<jersey.version>1.18</jersey.version>
+		<gwtVersion>2.8.0</gwtVersion>
+		<gwtpluginVersion>2.8.0</gwtpluginVersion>
+		<jersey.version>1.19.4</jersey.version>
 		<!-- GWT needs at least java 1.5 -->
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<modules>
